@@ -1,0 +1,18 @@
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 BlogSection, and 6 FooterSection
+Menu: Home About Projects Blog
+Color Palette: Royal blue & peach
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+Generate HeaderSection component for nextjs/reactjs using typescript and tailwindcss following the info above, make sure it looks clean with cool design and animation.
+
+Position the logo in the middle with 2 menu items on left and right side
+
+Cut the header div in a circular shape with the logo in the middle like the logo is button in the middle
+
+Make sure the HeaderSection is responsive with hamburger menu on mobile with full screen reveal animation
+
+Scroll to section with smooth scrolling behavior
