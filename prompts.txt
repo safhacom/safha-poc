@@ -16,3 +16,51 @@ Cut the header div in a circular shape with the logo in the middle like the logo
 Make sure the HeaderSection is responsive with hamburger menu on mobile with full screen reveal animation
 
 Scroll to section with smooth scrolling behavior
+
+To recreate the hero section of the provided website image, follow this detailed design specification:
+
+**Layout and Structure:**
+1. The hero section is a full viewport width and height container with a dark background color.
+2. The top left corner features a logo.
+3. The top right corner has a hamburger menu icon, indicating a collapsible menu.
+4. The main headline "DIGITAL DESIGNER & ART DIRECTOR." is prominently displayed in large, light-colored text aligned to the left.
+5. A sub-headline "BASED IN WARSAW, POLAND - UTC/GMT+2" is displayed below the main headline in smaller text.
+6. A circular image of a person (Stefan) is aligned to the right side of the section; part of the image exceeds the right boundary of the section, creating an overlap effect.
+7. To the left of the person's image, two distinct content blocks float:
+    - The top block contains the text "Hi, I'm Stefan" and should be styled as a speech bubble.
+    - The bottom block presents an achievement metric "12 Years of experience" and "100% Satisfied clients" together with associated icons.
+8. The bottom part of the hero section contains two large buttons or clickable indicators labeled "Human-centered" and "Interactive".
+
+**Styling:**
+- Background: A linear gradient or solid color that contrasts well with light text.
+- Logo and Menu Icon: Style according to brand guidelines, positioned in fixed corners.
+- Main Headline: Use a large, bold font, set to a light color against the dark background.
+- Sub-Headline: A lighter font-weight and smaller size than the main headline, same text color.
+- Circle Image:
+  - Positioned partly outside the section's right edge.
+  - Should have a border, shadow, or other effects to make it stand out against the background.
+- Content blocks (Speech bubble and Achievements):
+  - A background color that contrasts with the main background.
+  - Rounded corners.
+  - Drop shadows to create depth.
+- Bottom Buttons/Indicators:
+  - Large text with strong visual indicators that they are interactive (hover effects, etc.).
+  - Aligned horizontally, separated from each other and placed towards the lower section.
+
+**Interactivity:**
+- Hamburger Menu Icon: On click, should trigger an event to display a navigation menu (the functionality and specifics of the menu are beyond the scope of this hero section design).
+- Bottom Buttons/Indicators: On hover, should change appearance (e.g., color change, elevation, or transparency) to indicate that they are actionable elements.
+
+**Accessibility:**
+- Ensure all text is legible and that the contrast ratio between text and background meets WCAG standards.
+- Semantic HTML: Use appropriate tags like `<header>`, `<h1>`, `<p>`, and `<button>` for better accessibility and SEO.
+
+**Technical Notes:**
+- The overall layout can be achieved using CSS Flexbox or CSS Grid for positioning elements responsively.
+- Use media queries to ensure the design is responsive and adjusts gracefully to different screen sizes.
+- Use scalable units like `em`, `rem`, or percentages for font-sizes, paddings, and margins to maintain relative spacing and sizing on different devices.
+- Employ modern CSS properties like `border-radius`, `box-shadow`, and `text-shadow` for stylistic details.
+- Make sure the site is cross-browser compatible by using appropriate browser prefixes and fallbacks where necessary.
+- For any animations or transitions, use CSS3 transitions or keyframe animations, and keep them subtle to prevent distractions.
+
+Please note that font choices, exact colors, and other brand-specific design elements would need to be detailed in a complete design guide or style sheet which is not provided here. This specification aims to give a developer enough information to create a close approximation of the hero section with placeholders for specific design assets.
