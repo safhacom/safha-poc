@@ -1,11 +1,11 @@
-import HeaderSection from "@/components/HeaderSection"
 import HeroSection from "@/components/HeroSection"
+import NavigationHeader from "@/components/NavigationHeader"
 
 export default function Home() {
   return (
     <>
-      <HeaderSection />
-      <HeroSection />
+      <NavigationHeader />
+      <HeroSection backgroundImageSrc="/ai-background.png" />
     </>
   )
 }

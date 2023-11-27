@@ -64,3 +64,49 @@ To recreate the hero section of the provided website image, follow this detailed
 - For any animations or transitions, use CSS3 transitions or keyframe animations, and keep them subtle to prevent distractions.
 
 Please note that font choices, exact colors, and other brand-specific design elements would need to be detailed in a complete design guide or style sheet which is not provided here. This specification aims to give a developer enough information to create a close approximation of the hero section with placeholders for specific design assets.
+
+
+
+
+Generate the following component:
+
+Framework: nextjs
+Technology: TypeScript and TailwindCSS
+Type: Navigation header component
+Motivation: Users can click on different section to scroll into in a smooth behaviour
+Menu: About Projects Blog Contact Me
+Design: logo in the middle with About and Projects on the left side and Blog and Contact Me on the right side all centered and responsive
+Responsiveness: On mobile collabse to hamburger menu with full screen animated reveal menu with the logo and hamburger menu on the header
+Color: Royal blue & peach
+Padding: the design is padded with space and breathing room
+Font: use Ubuntu Mono
+Text: responsive text size
+Effects: add glass effect to the header with light gray border bottom color
+
+Framework: nextjs
+Technology: TypeScript and TailwindCSS
+Type: HeroSection component
+Motivation: Short description about the website with a background image blending in a cool design with the text
+Description: I change the world through writing computer understood art that empowers people's lives
+Design: AI-generated background image about a frontend engineer workspace with Description text ina cool layout
+Responsiveness: The section is responsive to mobile devices with the section split into 2 rows with the text above and background AI-generated image below
+Font: use already defined ubuntu-mono
+Text: responsive text size
+Color: Use already defined colors royalblue and peach
+Configuration: don't add any colors or font configuration to the project
+Effects: Very light glass effect added to the background image with light gray border color css clipping effect separation between the AI-generated image and Description text
+
+Framework: nextjs
+Technology: TypeScript and TailwindCSS
+Type: AboutSection component
+Motivation: Short description about the website with a background image blending in a cool design with the text
+Description: I change the world through writing computer understood art that empowers people's lives
+Design: AI-generated background image about a frontend engineer workspace with Description text ina cool layout
+Responsiveness: The section is responsive to mobile devices with the section split into 2 rows with the text above and background AI-generated image below
+Font: use already defined ubuntu-mono
+Text: responsive text size
+Color: Use already defined colors royalblue and peach
+Configuration: don't add any colors or font configuration to the project
+Effects: Very light glass effect added to the background image with light gray border color css clipping effect separation between the AI-generated image and Description text
+Errors to avoid:
+Error: Invalid <Link> with <a> child. Please remove <a> or use <Link legacyBehavior>.

@@ -9,13 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "royal-blue": "#4169e1",
-        peach: "#ffdab9",
+        royalblue: {
+          500: "#4169e1", // Replace with your preferred royal blue shade
+        },
+        peach: {
+          400: "#ffdab9", // Replace with your preferred peach shade
+        },
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        "ubuntu-mono": ["Ubuntu Mono", "monospace"],
       },
     },
   },
