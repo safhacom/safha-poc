@@ -18,13 +18,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImageSrc }) => {
         </div>
       </div>
 
-      <div className="relative h-64 md:h-96 w-full">
+      <div className="relative h-64 md:h-[600px] w-full">
         <Image
           src={backgroundImageSrc}
           alt="AI Generated Frontend Workspace"
           layout="fill"
           objectFit="cover"
-          className="opacity-60"
+          className="opacity-60 object-center"
         />
         <div
           className="absolute inset-0 bg-gradient-to-r from-transparent to-gray-200"

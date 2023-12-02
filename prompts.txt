@@ -110,3 +110,155 @@ Configuration: don't add any colors or font configuration to the project
 Effects: Very light glass effect added to the background image with light gray border color css clipping effect separation between the AI-generated image and Description text
 Errors to avoid:
 Error: Invalid <Link> with <a> child. Please remove <a> or use <Link legacyBehavior>.
+
+### Instructions ###
+You are a web developer that will generate a react component for AboutSection of a landing page website
+
+### Website general info ###
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 BlogSection, and 6 FooterSection
+Menu: Home About Projects Blog
+Color Palette: Royal blue & peach
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has 2 column layout
+On the first left column, catchy title and description text about the business
+On the right side, an AI-generated image image
+
+### Component design ###
+The 2 column layout both have equal width with the background with clip path Parallelogram
+
+### Colors ###
+Uses already defined Tailwindcss colors royalblue and peach
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily ubuntu-mono
+
+### Mobile responsiveness ###
+The component is mobile responsiveness to 1 column instead of 2 with the text column on top first
+
+### Animations ###
+Uses framer-mostion library with text reveal effect and fade-in effect for the background image
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Instructions ###
+You are a web developer that will generate a react component for ProjectsSection of a landing page website
+
+### Website general info ###
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 BlogSection, and 6 FooterSection
+Menu: Home About Projects Blog
+Color Palette: Royal blue & peach
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Projects ###
+1. Nahdi Mobile: react native ecommerce app for nahdi development
+2. Tawaklna: health passport tawalkana SDAIA app
+3. Bitchunk: file sharing and encryption solution
+4. Nahdi In: interns engagement platform
+5. Nuqtah NFTs marketplace: marketplace to trade NFTs
+6. Monshaat LMS: monshaat learning management system
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has 6 column layout
+Each column has a title and description of the project with a screenshot of the project underneath the text
+
+### Component design ###
+The 6 column layout have equal width
+
+### Colors ###
+Uses already defined Tailwindcss colors royalblue and peach
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily ubuntu-mono
+
+### Mobile responsiveness ###
+The component is mobile responsiveness to 1 column instead of 6
+
+### Animations ###
+Uses framer-mostion library with text reveal effect and fade-in effect for the background image
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+### Instructions ###
+You are a web developer that will generate a react component for BlogSection of a landing page website
+
+### Website general info ###
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 BlogSection, and 6 FooterSection
+Menu: Home About Projects Blog
+Color Palette: Royal blue & peach
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Blog ###
+article 1: how to win friends and influence people
+article 2: how to frontend like a conquerer
+article 3: how to css your way to a better job
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has 3 column layout
+each article has a title and hook text and image
+
+### Component design ###
+The 2 column layout both have equal width with the background with clip path Parallelogram
+
+### Colors ###
+Uses already defined Tailwindcss colors royalblue and peach
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily ubuntu-mono
+
+### Mobile responsiveness ###
+The component is mobile responsiveness to 1 column instead of 3
+
+### Animations ###
+Uses framer-mostion library with text reveal effect and fade-in effect for the background image
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
