@@ -262,3 +262,105 @@ Give your answer as a single usable nextjs component
 
 ### Content ###
 Generate all content needed
+
+### Instructions ###
+You are a web developer that will generate a react component for HeaderSection of a landing page website
+
+### Website general info ###
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 BlogSection, and 6 FooterSection
+Menu: Home About Projects Blog
+Color Palette: Royal blue & peach
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Menu ###
+About Projects Articles
+
+### Scroll behaviour ###
+Scroll into view on menu click
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The logo on th left side and clickable menus link on the right side
+
+### Component design ###
+The design features border bottom with atleast 100 pixels hight the header bar has glass effect onscroll and position sticky which will on top of the hero section the menus features hover effect
+
+### Colors ###
+Uses already defined Tailwindcss colors royalblue and peach
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily roboto
+
+### Mobile responsiveness ###
+The component is mobile responsive with hamburger menu and fullscreen white background mobile menu on mobile
+
+### Animations ###
+Uses framer-mostion library with text reveal effect
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+### Instructions ###
+You are a web developer that will generate a react component for HeroSection of a landing page website
+
+### Website general info ###
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 BlogSection, and 6 FooterSection
+Menu: Home About Projects Blog
+Color Palette: Royal blue & peach
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Text ###
+Title: Safha: Makes running a business easier than having a job
+Description: The SaaS product envisioned here is designed to streamline and simplify business operations to the point where managing a business feels less demanding than being an employee
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component offers 75% of screen hight full width AI-generate background with title and descirption text on the middle with bold and large text
+
+### Component design ###
+The component has full width AI-generated background with black transparent shade on top to make the text easier to read
+
+### Colors ###
+Uses already defined Tailwindcss colors royalblue and peach
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily roboto
+
+### Mobile responsiveness ###
+The component is mobile responsive and text is smaller on mobile
+
+### Animations ###
+Uses framer-mostion library with text reveal effect
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
