@@ -12,7 +12,7 @@ export default function AppHead() {
     language: "en",
     robots: "all",
     icon: "/icon.png",
-    themeColor: "#4169e1",
+    themeColor: "#ffdab9",
     generator: "Safha",
     designer: "safha.com",
     applicationName: "Safha",
