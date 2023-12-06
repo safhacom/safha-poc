@@ -7,9 +7,9 @@ import { useState } from "react"
 
 const navItems = [
   { name: "Home", href: "#" },
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Blog", href: "#blog" },
+  { name: "About", href: "#" },
+  { name: "Projects", href: "#" },
+  { name: "Blog", href: "#" },
 ]
 
 const HeaderSection = () => {
@@ -19,11 +19,6 @@ const HeaderSection = () => {
   // Function to handle link click and scrolling behavior
   const handleNavLinkClick = (href: string) => {
     setIsNavOpen(false)
-    const section = document.querySelector(href)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
-      router.push(href, undefined, { shallow: true })
-    }
   }
 
   return (

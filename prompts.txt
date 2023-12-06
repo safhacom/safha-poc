@@ -364,3 +364,105 @@ Give your answer as a single usable nextjs component
 
 ### Content ###
 Generate all content needed
+
+### Instructions ###
+You are a web developer that will generate a react component for BlogSection of a landing page website
+
+### Website general info ###
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 BlogSection, and 6 FooterSection
+Menu: Home About Projects Blog
+Color Palette: Royal blue & peach
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Articles ###
+Article 1: How to win in life? (about finanical freedom)
+Article 2: How to write greate code? (about computer science)
+Article 3: love and Life (about relationships)
+Article 4: God does he exist? (about religion)
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component layout is 3 column in desktop 2 columns in tablet and 1 column on mobile
+
+### Component design ###
+The component has a card for each article with text and generated well written description of 160 characters and an relevent image at the bottom half of the card the card has move up on hover animation and fade in animation
+
+### Colors ###
+Uses already defined Tailwindcss colors royalblue and peach
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily roboto
+
+### Mobile responsiveness ###
+The component layout becomes 2 columns on tablet and 1 column on mobile with smaller text
+
+### Animations ###
+Uses framer-mostion library with text reveal effect
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+### Instructions ###
+You are a web developer that will generate a react component for FooterSection of a landing page website
+
+### Website general info ###
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 BlogSection, and 6 FooterSection
+Menu: Home About Projects Blog
+Color Palette: Royal blue & peach
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+### Component content ###
+logo image on first column
+all rights reserved with date text and year
+Contact us link on click
+
+### Component layout ###
+The component layout is 3 column centered
+
+### Component design ###
+The component is royalblue in background color with white text 
+
+### Colors ###
+Uses already defined Tailwindcss colors royalblue and peach
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily roboto
+
+### Mobile responsiveness ###
+The component layout becomes 1 column on mobile with smaller text and logo image
+
+### Animations ###
+Uses framer-mostion library with text reveal effect
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
