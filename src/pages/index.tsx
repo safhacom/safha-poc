@@ -1,20 +1,20 @@
 // import AboutSection from "@/components/About-Us";
 // import ContactusSection from "@/components/Contact-Us";
-import Header from "@/components/Navigation-header-component";
-import Hero from "@/components/HeroSection-component";
-import Aboutus from "@/components/About-US";
-import Products from "@/components/Products";
-import Benefits from "@/components/Benefits";
-import Testimonials from "@/components/testimonials";
-import Features from "@/components/Features";
-import Pricing from "@/components/Pricing";
+import AboutUs from "@/components/AboutUs"
+import Benefits from "@/components/Benefits"
+import Features from "@/components/Features"
+import Hero from "@/components/HeroSection-component"
+import Header from "@/components/Navigation-header-component"
+import Pricing from "@/components/Pricing"
+import Products from "@/components/Products"
+import Testimonials from "@/components/Testimonials"
 
 export default function Home() {
   return (
     <>
       <Header />
       <Hero backgroundImageSrc="/ai-background.png" />
-      <Aboutus />
+      <AboutUs />
       <Features />
       <Benefits />
       <Products />
@@ -25,5 +25,5 @@ export default function Home() {
       <Testimonials />
       <ContactusSection /> */}
     </>
-  );
+  )
 }
