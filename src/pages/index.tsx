@@ -1,23 +1,29 @@
-import AboutSection from "@/components/About-Us";
-import ContactusSection from "@/components/Contact-Us";
-import HomeSection from "@/components/Home";
+// import AboutSection from "@/components/About-Us";
+// import ContactusSection from "@/components/Contact-Us";
+import Header from "@/components/Navigation-header-component";
+import Hero from "@/components/HeroSection-component";
+import Aboutus from "@/components/About-US";
 import Products from "@/components/Products";
-import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
+import Benefits from "@/components/Benefits";
+import Testimonials from "@/components/testimonials";
+import Features from "@/components/Features";
+import Pricing from "@/components/Pricing";
 
 export default function Home() {
   return (
     <>
-      <HomeSection />
-      <HeroSection backgroundImageSrc="/ai-background.png" />
-      <AboutSection
-        title="About Me"
-        description="I'm a professional developer with a passion for creating modern, elegant, and user-friendly applications."
-        imageUrl="/about.png"
-      />
-      <ProjectsSection />
-      <BlogSection />
-      <FooterSection />
+      <Header />
+      <Hero backgroundImageSrc="/ai-background.png" />
+      <Aboutus />
+      <Features />
+      <Benefits />
+      <Products />
+      <Testimonials />
+      <Pricing />
+
+      {/* <Services />
+      <Testimonials />
+      <ContactusSection /> */}
     </>
   );
 }

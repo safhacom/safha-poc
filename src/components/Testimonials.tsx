@@ -1,69 +1,85 @@
+// components/Testimonials.tsx
+import { FC } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
-const testimonials = [
+interface Testimonial {
+  title: string;
+  description: string;
+}
+
+const testimonials: Testimonial[] = [
   {
-    title: "Customer Satisfaction",
+    title: "Seamless Integration",
     description:
-      "Hear from our satisfied customers who have seen significant improvements in their operations after implementing our solutions.",
-    image: "/path/to/image1.jpg",
+      "Our software easily integrates with existing systems, enhancing workflow without the need for extensive training or downtime.",
   },
   {
-    title: "Case Studies",
+    title: "Innovative Solutions",
     description:
-      "Read our case studies to understand how we have helped businesses overcome their tech challenges and achieve their goals.",
-    image: "/path/to/image2.jpg",
+      "We're constantly pushing the boundaries of what's possible, providing cutting-edge solutions that keep our clients ahead of the competition.",
   },
   {
-    title: "Success Stories",
+    title: "Exceptional Support",
     description:
-      "Explore our success stories to see how we have transformed businesses with our innovative tech solutions.",
-    image: "/path/to/image3.jpg",
+      "Our dedicated support team is always ready to help, ensuring any issues are resolved quickly and efficiently.",
   },
   {
-    title: "Client Testimonials",
+    title: "Proven Reliability",
     description:
-      "Check out the testimonials from our clients who are happy to share their positive experiences with our services.",
-    image: "/path/to/image4.jpg",
+      "With a 99.9% uptime guarantee, our clients trust us to keep their operations running smoothly around the clock.",
+  },
+  {
+    title: "Customer Success Stories",
+    description:
+      "Hear from our satisfied customers who have transformed their businesses using our technology solutions.",
   },
   {
     title: "Industry Recognition",
     description:
-      "We are proud to be recognized by leading industry experts for our commitment to delivering high-quality tech solutions.",
-    image: "/path/to/image5.jpg",
+      "Our commitment to excellence has been recognized by industry awards and accolades, reflecting our position as a leader in tech innovation.",
   },
 ];
 
-const Testimonials = () => {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const Testimonials: FC = () => {
   return (
-    <div className="flex flex-wrap justify-center items-center text-royalblue bg-peach p-8">
-      {testimonials.map((testimonial, index) => (
+    <section className="bg-ECEFF1 text-212121 py-12">
+      <div className="container mx-auto px-4">
         <motion.div
-          key={index}
-          className="w-full md:w-1/3 p-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
-          <div className="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
-            <Image
-              src={testimonial.image}
-              alt={testimonial.title}
-              width={500}
-              height={300}
-              objectFit="cover"
-              className="rounded"
-            />
-            <h2 className="font-ubuntu-mono text-2xl mb-2">
-              {testimonial.title}
-            </h2>
-            <p className="font-ubuntu-mono text-base">
-              {testimonial.description}
-            </p>
-          </div>
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-md"
+              variants={itemVariants}
+            >
+              <h3 className="text-lg font-semibold text-0D47A1 mb-2">
+                {testimonial.title}
+              </h3>
+              <p className="text-sm text-212121">{testimonial.description}</p>
+            </motion.div>
+          ))}
         </motion.div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 };
 

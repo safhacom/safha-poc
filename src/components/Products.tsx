@@ -1,62 +1,80 @@
+// ProductOverview.tsx
+import { motion } from "framer-motion";
+import Image from "next/image";
+import React from "react";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+interface Feature {
+  title: string;
+  description: string;
+}
 
-const products = [
+const features: Feature[] = [
   {
-    title: 'Cloud Services',
-    description: 'Our cloud services offer secure, scalable, and reliable solutions for your business. We provide infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS) to meet all your cloud computing needs.',
-    image: '/images/cloud-services.jpg'
+    title: "Innovative Solutions",
+    description:
+      "Explore our cutting-edge products designed to transform your business operations and drive growth.",
   },
+  // ... Add all other features here
   {
-    title: 'Cybersecurity Solutions',
-    description: 'We offer comprehensive cybersecurity solutions to protect your business from cyber threats. Our services include threat detection, incident response, and security risk management.',
-    image: '/images/cybersecurity.jpg'
+    title: "Sustainability",
+    description:
+      "Learn about our commitment to sustainability and how our products help reduce your company's environmental footprint.",
   },
-  {
-    title: 'Data Analytics',
-    description: 'Our data analytics solutions help you make data-driven decisions. We provide tools for data collection, processing, analysis, and visualization.',
-    image: '/images/data-analytics.jpg'
-  },
-  {
-    title: 'Artificial Intelligence',
-    description: 'We offer AI solutions to automate your business processes and gain insights from your data. Our AI services include machine learning, natural language processing, and computer vision.',
-    image: '/images/ai.jpg'
-  },
-  {
-    title: 'Software Development',
-    description: 'We provide custom software development services to meet your unique business needs. Our team of experienced developers can build web, mobile, and desktop applications.',
-    image: '/images/software-development.jpg'
-  },
-  {
-    title: 'IT Consulting',
-    description: 'Our IT consulting services help you leverage technology to achieve your business goals. We offer strategic planning, project management, and IT infrastructure services.',
-    image: '/images/it-consulting.jpg'
-  }
 ];
 
-const Products = () => {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const ProductOverview: React.FC = () => {
   return (
-    <div className="flex flex-wrap justify-center text-center text-royalblue bg-peach font-ubuntu-mono">
-      {products.map((product, index) => (
+    <section className="bg-ECEFF1 text-212121">
+      <div className="container mx-auto px-4 py-16">
         <motion.div
-          key={index}
-          className="w-full md:w-1/3 p-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.2 }}
+          className="text-center"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
         >
-          <div className="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
-            <Image src={product.image} alt={product.title} width={500} height={300} />
-            <h2 className="font-bold text-2xl mb-4">{product.title}</h2>
-            <p>{product.description}</p>
+          <motion.h2
+            className="text-4xl font-bold mb-6"
+            variants={itemVariants}
+          >
+            Product Overview
+          </motion.h2>
+          <motion.p className="text-lg mb-12" variants={itemVariants}>
+            Empowering the Future: Innovating a World Where Technology and
+            Humanity Converge for a Brighter Tomorrow.
+          </motion.p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out"
+                variants={itemVariants}
+              >
+                <h3 className="text-2xl text-0D47A1 font-bold mb-3">
+                  {feature.title}
+                </h3>
+                <p>{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 };
 
-export default Products;
-
-
+export default ProductOverview;
