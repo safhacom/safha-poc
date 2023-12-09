@@ -1,86 +1,78 @@
+import { FC } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FC } from "react";
+
+interface PropertyCardProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+const PropertyCard: FC<PropertyCardProps> = ({
+  title,
+  description,
+  imageUrl,
+}) => (
+  <motion.div
+    className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out cursor-pointer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <Image
+      src={imageUrl}
+      alt={title}
+      className="rounded-t-lg"
+      width={300}
+      height={200}
+      objectFit="cover"
+    />
+    <h3 className="text-2xl text-2E4053 font-bold mt-2">{title}</h3>
+    <p className="text-5D6D7E">{description}</p>
+    <button className="mt-4 bg-1ABC9C text-white py-2 px-4 rounded hover:bg-1ABC9C-dark">
+      More Details
+    </button>
+  </motion.div>
+);
 
 const FeaturedProperties: FC = () => {
   const properties = [
     {
       title: "Luxury Estates",
       description:
-        "Discover the epitome of elegance and sophistication with our Luxury Estates collection. Each property in this exclusive selection has been meticulously chosen for its unparalleled craftsmanship, breathtaking architecture, and extraordinary attention to detail...",
-      imageUrl: "/nuqtah.png", // Replace with your image path
+        "Discover the epitome of elegance and sophistication with our Luxury Estates collection. Each property in this exclusive selection has been meticulously curated to offer the finest in luxury living.",
+      imageUrl: "/tawaklana.png",
     },
-    {
-      title: "Urban Condominiums",
-      description:
-        "Embrace the vibrant city life with our Urban Condominiums. Located in the most sought-after neighborhoods, these modern residences provide convenience and style...",
-      imageUrl: "/nuqtah.png", // Replace with your image path
-    },
-    {
-      title: "Coastal Retreats",
-      description:
-        "Experience the serenity of the shore with our Coastal Retreats. These properties are nestled along pristine beaches and boast stunning oceanfront views...",
-      imageUrl: "/nuqtah.png", // Replace with your image path
-    },
-    // ... Add other properties here
+    // ... other properties
   ];
 
   return (
-    <section className="py-12 bg-f0f2f5">
+    <section className="py-12 bg-F0F2F5" id="featured-properties">
       <div className="container mx-auto px-4">
+        <motion.h2
+          className="text-3xl text-2E4053 font-bold mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Featured Properties
+        </motion.h2>
         <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
           initial="hidden"
           animate="visible"
           variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { delay: 0.2 } },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
           }}
-          className="text-center mb-8"
         >
-          <h2 className="text-2xl font-bold text-2e4053 mb-3">
-            Featured Properties
-          </h2>
-          <p className="text-5d6d7e">
-            Explore our exclusive selection of properties that offer luxury,
-            comfort, and style.
-          </p>
-        </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {properties.map((property, index) => (
-            <motion.div
-              key={index}
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                  transition: { delay: 0.1 * index },
-                },
-              }}
-              className="bg-white shadow-lg rounded-lg overflow-hidden"
-            >
-              <div className="relative h-56">
-                <Image
-                  src={property.imageUrl}
-                  alt={property.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition duration-300 ease-in-out transform hover:scale-105"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-xl text-2e4053 font-semibold mb-2">
-                  {property.title}
-                </h3>
-                <p className="text-5d6d7e text-sm">{property.description}</p>
-                <button className="mt-4 bg-1abc9c text-white py-2 px-4 rounded hover:bg-1a9c8f transition duration-300">
-                  View Details
-                </button>
-              </div>
-            </motion.div>
+            <PropertyCard key={index} {...property} />
           ))}
+        </motion.div>
+        <div className="text-center mt-8">
+          <button className="bg-D4AC0D text-white py-2 px-6 rounded hover:bg-D4AC0D-dark">
+            View All Properties
+          </button>
         </div>
       </div>
     </section>
