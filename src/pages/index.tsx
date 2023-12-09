@@ -4,7 +4,7 @@ import NavigationHeader from "@/components/Navigation header component";
 import HeroSection from "@/components/HeroSection component";
 import PropertySearch from "@/components/Property Search";
 import LatestNews from "@/components/Latest News";
-import ContactForm from "@/components/Contact Form";
+import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
 //import AgentsSection from "@/components/Agents Section";
 import Footer from "@/components/Footer";

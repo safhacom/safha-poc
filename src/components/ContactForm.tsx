@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { motion } from "framer-motion"
+import Image from "next/image"
+import { useState } from "react"
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,18 +9,18 @@ const ContactForm = () => {
     phone: "",
     message: "",
     propertyInterest: "",
-  });
+  })
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     // Submit form logic
-    console.log(formData);
-  };
+    console.log(formData)
+  }
 
   return (
     <motion.div
@@ -124,7 +124,7 @@ const ContactForm = () => {
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm
