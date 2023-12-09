@@ -1,83 +1,86 @@
-// components/Testimonials.tsx
-import { FC } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
 
-interface Testimonial {
-  title: string;
-  description: string;
-}
-
-const testimonials: Testimonial[] = [
+const testimonials = [
   {
-    title: "Seamless Integration",
+    id: 1,
+    title: "First-Time Homebuyer Joy",
     description:
-      "Our software easily integrates with existing systems, enhancing workflow without the need for extensive training or downtime.",
+      "As a first-time homebuyer, the process of finding and purchasing a home was initially overwhelming. However, the team at DreamHouse Realty transformed my anxiety into excitement. From the initial consultation to the final closing, their agents provided me with comprehensive market analysis, insightful advice on neighborhood selection, and a list of properties that matched my desires and budget. Their patience and dedication were evident as they guided me through each step, ensuring I understood every detail. The moment I walked into what is now my home, I knew it was the one. Thanks to DreamHouse Realty, I am now a proud homeowner, and I couldn't be happier with my purchase and the exceptional service I received.",
+    image: "/person.png", // Replace with the path to your image
   },
-  {
-    title: "Innovative Solutions",
-    description:
-      "We're constantly pushing the boundaries of what's possible, providing cutting-edge solutions that keep our clients ahead of the competition.",
-  },
-  {
-    title: "Exceptional Support",
-    description:
-      "Our dedicated support team is always ready to help, ensuring any issues are resolved quickly and efficiently.",
-  },
-  {
-    title: "Proven Reliability",
-    description:
-      "With a 99.9% uptime guarantee, our clients trust us to keep their operations running smoothly around the clock.",
-  },
-  {
-    title: "Customer Success Stories",
-    description:
-      "Hear from our satisfied customers who have transformed their businesses using our technology solutions.",
-  },
-  {
-    title: "Industry Recognition",
-    description:
-      "Our commitment to excellence has been recognized by industry awards and accolades, reflecting our position as a leader in tech innovation.",
-  },
+  // ... other testimonials
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+const Testimonials = () => {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+  const variants = {
+    enter: { opacity: 0, y: 20 },
+    center: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+  };
 
-const Testimonials: FC = () => {
   return (
-    <section className="bg-ECEFF1 text-212121 py-12">
+    <section className="bg-white py-16">
       <div className="container mx-auto px-4">
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+        <motion.h2
+          initial="enter"
+          animate="center"
+          exit="exit"
+          variants={variants}
+          transition={{ duration: 0.8 }}
+          className="text-2xl font-bold text-2E4053 mb-10"
         >
+          What Our Clients Say
+        </motion.h2>
+        <div className="flex flex-wrap justify-center gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md"
-              variants={itemVariants}
+              key={testimonial.id}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              variants={variants}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="w-full md:w-1/2 lg:w-1/3 p-4"
+              onClick={() => setActiveTestimonial(index)}
             >
-              <h3 className="text-lg font-semibold text-0D47A1 mb-2">
-                {testimonial.title}
-              </h3>
-              <p className="text-sm text-212121">{testimonial.description}</p>
+              <div className="bg-F0F2F5 p-6 rounded-lg shadow-lg">
+                <div className="mb-4">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.title}
+                    width={100}
+                    height={100}
+                    className="rounded-full"
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-2E4053 mb-2">
+                  {testimonial.title}
+                </h3>
+                <p className="text-md text-5D6D7E">{testimonial.description}</p>
+              </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
+        {testimonials[activeTestimonial] && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mt-10 text-center"
+          >
+            <p className="text-lg text-5D6D7E italic">
+              "{testimonials[activeTestimonial].description}"
+            </p>
+            <button className="mt-4 bg-1ABC9C text-white py-2 px-4 rounded-full">
+              Read More
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );

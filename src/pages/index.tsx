@@ -1,25 +1,30 @@
 // import AboutSection from "@/components/About-Us";
-// import ContactusSection from "@/components/Contact-Us";
-import Header from "@/components/Navigation-header-component";
-import Hero from "@/components/HeroSection-component";
-import Aboutus from "@/components/About-US";
-import Products from "@/components/Products";
-import Benefits from "@/components/Benefits";
-import Testimonials from "@/components/testimonials";
-import Features from "@/components/Features";
-import Pricing from "@/components/Pricing";
+import BlogSection from "@/components/Latest News and Blog Posts";
+import NavigationHeader from "@/components/Navigation header component";
+import HeroSection from "@/components/HeroSection component";
+import AboutUs from "@/components/About Us";
+import PropertyListings from "@/components/Property Listings";
+import ContactForm from "@/components/Contact Information";
+import Testimonials from "@/components/Testimonials";
+import ServicesOffered from "@/components/Services Offered";
+import Footer from "@/components/Footer with Legal Information";
+import FeaturedProperties from "@/components/Featured Properties";
+import NewsletterSubscription from "@/components/Newsletter Subscription";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <Hero backgroundImageSrc="/ai-background.png" />
-      <Aboutus />
-      <Features />
-      <Benefits />
-      <Products />
+      <NavigationHeader />
+      <HeroSection />
+      <AboutUs />
+      <PropertyListings />
+      <FeaturedProperties />
+      <ServicesOffered />
+      <NewsletterSubscription />
+      <BlogSection />
       <Testimonials />
-      <Pricing />
+      <ContactForm />
+      <Footer />
 
       {/* <Services />
       <Testimonials />

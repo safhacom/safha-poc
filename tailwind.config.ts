@@ -9,12 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        royalblue: {
-          500: "#4169e1", // Replace with your preferred royal blue shade
-        },
-        peach: {
-          400: "#ffdab9", // Replace with your preferred peach shade
-        },
+        'dark-slate': '#2E4053',
+        'medium-slate': '#5D6D7E',
+        'silver-gray': '#D5D8DC',
+        'sky-blue': '#3498DB',
+        'brick-red': '#E74C3C',
+        'sea-green': '#16A085',
+        'sunflower-yellow': '#F1C40F',
+        'plum-purple': '#7D3C98',
       },
       fontFamily: {
         "ubuntu-mono": ["Ubuntu Mono", "monospace"],
