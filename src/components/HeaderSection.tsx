@@ -32,7 +32,7 @@ const HeaderSection: React.FC = () => {
     <motion.header
       initial={{ opacity: 0 }}
       animate={controls}
-      className="flex flex-wrap items-center justify-between px-4 py-3 bg-floor text-spiky font-ubuntu-mono relative border-b border-spiky"
+      className="flex flex-wrap items-center justify-between px-4 py-3 bg-spiky text-floor font-ubuntu-mono relative border-b border-floor"
     >
       <nav className="w-full md:flex md:justify-between md:items-center">
         {/* Logo */}
@@ -81,7 +81,7 @@ const HeaderSection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="absolute top-full left-0 right-0 bg-floor z-10 md:hidden"
+            className="absolute top-full left-0 right-0 bg-spiky z-10 md:hidden"
           >
             <div className="px-4 py-2">
               {["About", "Projects", "Services", "Pricing"].map(
