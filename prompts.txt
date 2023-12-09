@@ -262,3 +262,234 @@ Give your answer as a single usable nextjs component
 
 ### Content ###
 Generate all content needed
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+### Instructions ###
+You are a web developer that will generate a react component for HeaderSection of a landing page website
+
+### Website general info ###
+Name: Younes Alturkey portfolio
+Value from website: Display professional services and showcase skills
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 ServicesSection, and 6 PricingSection 7 FooterSection
+Menu: Home About Projects Services Pricing
+Color Palette: #50f5ac named "spiky" & #101223 named "floor"
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Menu ###
+About id=#about-section Projects id=#projects-section Services id=#services-section Pricing id=#pricing-section
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has 3 column layout two menu items logo in the middle then two menu items after that
+
+### Component design ###
+The design is 25% width for the first 2 menu items 50% logo column then 25% 2 menu items
+
+### Colors ###
+Uses already defined Tailwindcss colors spiky and floor
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily ubuntu-mono
+
+### Mobile responsiveness ###
+The component is mobile responsive with hamburge collapse menu on the header and fullscreen mobile menu for menu items
+
+### Behaviour ###
+On menu click on desktop and mobile smooth scroll to section
+
+### Animations ###
+Uses framer-mostion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for AboutSection of a landing page website
+
+### Website general info ###
+Name: Younes Alturkey portfolio
+Value from website: Display professional services and showcase skills
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 ServicesSection, and 6 PricingSection 7 FooterSection
+Menu: Home About Projects Services Pricing
+Color Palette: #50f5ac named "spiky" & #101223 named "floor"
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Text ###
+About: Younes is a software engineer available for freelance hire
+Description: generate more text to sell younes as a great engineer and freelancer
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has 2 column layout text and AI-generate image
+
+### Component design ###
+The text column is title then description and the image column has AI-generate image with heptagon clipping
+
+### Colors ###
+Uses already defined Tailwindcss colors spiky and floor
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily ubuntu-mono
+
+### Mobile responsiveness ###
+The component is mobile responsive that turns into 1 column on mobile
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for ProjectsSection of a landing page website
+
+### Website general info ###
+Name: Younes Alturkey portfolio
+Value from website: Display professional services and showcase skills
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 ServicesSection, and 6 PricingSection 7 FooterSection
+Menu: Home About Projects Services Pricing
+Color Palette: #50f5ac named "spiky" & #101223 named "floor"
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Projects ###
+NahdiIn: intern engagment platform
+Nahdi Mobile: nahdi e-commerce platform
+Bitchunk: file encryption and sharing
+Monshaat LMS: learning management system
+Nuqtah: NFTs marketplace
+Farabi: chatgpt browser extention
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has 3 column layout with cards for each project the layout is max widthed at 1550px and centered
+
+### Component design ###
+spiky background color with floor text color and border color with raise up animation on hover
+
+### Colors ###
+Uses already defined Tailwindcss colors spiky and floor
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily ubuntu-mono
+
+### Mobile responsiveness ###
+The component is mobile responsive that turns into 1 column on mobile
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for ServicesSection of a landing page website
+
+### Website general info ###
+Name: Younes Alturkey portfolio
+Value from website: Display professional services and showcase skills
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 ProjectsSection, 5 ServicesSection, and 6 PricingSection 7 FooterSection
+Menu: Home About Projects Services Pricing
+Color Palette: #50f5ac named "spiky" & #101223 named "floor"
+Website vision: professional portfolio website
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Services ###
+Full-Stack Engineering
+Web3 Engineering
+Frontend Engineering
+Backend Engineering
+Mobile Engineering
+UX/UI Design
+IT Project Management
+Product Development
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has 4 column layout with cards for each project the layout is max widthed at 1550px and centered
+
+### Component design ###
+floor background color with spiky text color and raise up animation on hover also there rainbow animated border on each card the card has title text then decription and image on the bottom
+
+### Colors ###
+Uses already defined Tailwindcss colors spiky and floor
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily ubuntu-mono
+
+### Mobile responsiveness ###
+The component is mobile responsive that turns into 1 column on mobile
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+

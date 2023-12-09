@@ -9,14 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'dark-slate': '#2E4053',
-        'medium-slate': '#5D6D7E',
-        'silver-gray': '#D5D8DC',
-        'sky-blue': '#3498DB',
-        'brick-red': '#E74C3C',
-        'sea-green': '#16A085',
-        'sunflower-yellow': '#F1C40F',
-        'plum-purple': '#7D3C98',
+        spiky: "#50f5ac",
+        floor: "#101223",
       },
       fontFamily: {
         "ubuntu-mono": ["Ubuntu Mono", "monospace"],

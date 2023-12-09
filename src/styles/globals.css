@@ -5,3 +5,36 @@
 html {
   scroll-behavior: smooth;
 }
+
+.clip-heptagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Add this within your global CSS file */
+@keyframes rainbow {
+  0%,
+  100% {
+    border-color: #ff3838;
+  }
+  15% {
+    border-color: #ff9d00;
+  }
+  30% {
+    border-color: #ffee00;
+  }
+  45% {
+    border-color: #19ff46;
+  }
+  60% {
+    border-color: #11cdf4;
+  }
+  75% {
+    border-color: #7e10cc;
+  }
+}
+
+.rainbow-border {
+  animation: rainbow 5s linear infinite;
+  border: 3px solid transparent;
+  border-radius: 15px;
+}
