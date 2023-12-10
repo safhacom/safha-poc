@@ -493,3 +493,285 @@ Give your answer as a single usable nextjs component
 ### Content ###
 Generate all content needed
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for HeaderSection of a landing page website
+
+### Website general info ###
+Name: Mamo Cupcakes
+Value from website: Display store cup cakes and thier info and prices
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 CupCakesSection, 5 PricingSection, 6 FooterSection
+Menu: Home About Cupcakes Pricing
+Color Palette: #FF90BC named "pinky", #F9F9E0 named "sun", and #8ACDD7 named "sky"
+Font Family: silkscreen
+Website vision: cupcake store
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Header Menu ###
+About
+Cupcakes
+Pricing
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has 2 column one has the logo image of the website and the other has the three menu clickable links stretched between to full width
+
+### Component design ###
+The design is background pinky color with white text color and border bottom
+
+### Colors ###
+Uses already defined Tailwindcss colors pinky and sun and sky
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily silkscreen
+
+### Mobile responsiveness ###
+The component is mobile responsive with hamburge collapse menu on the header and fullscreen mobile menu for menu items
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Behaviour ###
+On menu click on desktop and mobile smooth scroll to section
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for HeroSection of a landing page website
+
+### Website general info ###
+Name: Mamo Cupcakes
+Value from website: Display store cup cakes and thier info and prices
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 CupCakesSection, 5 PricingSection, 6 FooterSection
+Menu: Home About Cupcakes Pricing
+Color Palette: #FF90BC named "pinky", #F9F9E0 named "sun", and #8ACDD7 named "sky"
+Font Family: silkscreen
+Website vision: cupcake store
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Hero Text ###
+Mamo Cupcakes
+***Insert AI-generated cupckaes marketing text
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component is full screen width background image with centered title and text and the text is not full width underneath the text is a button named contact us
+
+### Component design ###
+The design is background image that is AI generated with pinkish light shade and white text on top the text is not full width and there's reveal animation effect the contact is button is white background with pinky text color and rounded border
+
+### Colors ###
+Uses already defined Tailwindcss colors pinky and sun and sky
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily silkscreen
+
+### Mobile responsiveness ###
+The component is mobile responsive with smaller text and the text ontop of the button into 1 column layout
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for CupCakesSection of a landing page website
+
+### Website general info ###
+Name: Mamo Cupcakes
+Value from website: Display store cup cakes and thier info and prices
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 CupCakesSection, 5 PricingSection, 6 FooterSection
+Menu: Home About Cupcakes Pricing
+Color Palette: #FF90BC named "pinky", #F9F9E0 named "sun", and #8ACDD7 named "sky"
+Font Family: silkscreen
+Website vision: cupcake store
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### CupCakes ###
+Long Jacky: sugar glazed goodness
+Short Bob: vanlia sunflower greatness
+Uncle Maria: invert your taste with sugary and salty
+Mother Terza: the earth taste of greatness
+Hobby: for those with energy
+Hampilton: for those of us that love to build
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component is 3 column layout card of the cupcake with title description and image of the cupcake
+
+### Component design ###
+The design is 3 column layout of cards of each cupcakes with light pink background and white text and shadow and border with radius
+
+### Colors ###
+Uses already defined Tailwindcss colors pinky and sun and sky
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily silkscreen
+
+### Mobile responsiveness ###
+The component is mobile responsive with 1 column on mobile
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for PricingSection of a landing page website
+
+### Website general info ###
+Name: Mamo Cupcakes
+Value from website: Display store cup cakes and thier info and prices
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 CupCakesSection, 5 PricingSection, 6 FooterSection
+Menu: Home About Cupcakes Pricing
+Color Palette: #FF90BC named "pinky", #F9F9E0 named "sun", and #8ACDD7 named "sky"
+Font Family: silkscreen
+Website vision: cupcake store
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Pricing Packages ###
+Average: 6 cupcakes for 29.99 SAR
+Enhaler: 12 cupcakes for 49.99 SAR
+Gluttoneous: 24 cupcakes 99.99 SAR
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component is 3 column layout card of the cupcake price in large text
+
+### Component design ###
+The design is 3 column layout of cards of each price package
+
+### Colors ###
+Uses already defined Tailwindcss colors pinky and sun and sky
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily silkscreen
+
+### Mobile responsiveness ###
+The component is mobile responsive with 1 column on mobile
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for FooterSection of a landing page website
+
+### Website general info ###
+Name: Mamo Cupcakes
+Value from website: Display store cup cakes and thier info and prices
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 CupCakesSection, 5 PricingSection, 6 FooterSection
+Menu: Home About Cupcakes Pricing
+Color Palette: #FF90BC named "pinky", #F9F9E0 named "sun", and #8ACDD7 named "sky"
+Font Family: silkscreen
+Website vision: cupcake store
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Copyright text ###
+year copyright symbol Mamo Cupcakes
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component is centered text
+
+### Component design ###
+The design is sun packground with white text color bolded
+
+### Colors ###
+Uses already defined Tailwindcss colors pinky and sun and sky
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily silkscreen
+
+### Mobile responsiveness ###
+The component is mobile responsive with 1 column on mobile
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed

@@ -9,11 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        spiky: "#50f5ac",
-        floor: "#101223",
+        pinky: "#FF90BC ",
+        sun: "#F9F9E0",
+        sky: "#8ACDD7",
       },
       fontFamily: {
-        "ubuntu-mono": ["Ubuntu Mono", "monospace"],
+        silkscreen: ["Silkscreen", "monospace"],
       },
     },
   },

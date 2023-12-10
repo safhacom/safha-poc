@@ -43,14 +43,14 @@ export default function AppHead() {
       images: [
         {
           key: "md",
-          url: `/how-to-win-friends.png`,
+          url: `/cakes.png`,
           alt: "Safha logo in a banner",
           width: 800,
           height: 600,
         },
         {
           key: "lg",
-          url: `/how-to-win-friends.png`,
+          url: `/cakes.png`,
           width: 1800,
           height: 1600,
           alt: "Safha logo in a banner",
@@ -66,7 +66,7 @@ export default function AppHead() {
       siteId: "@SafhaSA",
       creator: "@SafhaSA",
       creatorId: "@SafhaSA",
-      images: [`/how-to-win-friends.png`],
+      images: [`/cakes.png`],
       domain: "Safha.gov.sa",
       url: "https://safha-web.vercel.app",
     },
