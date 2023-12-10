@@ -1,27 +1,32 @@
-import AboutSection from "@/components/About Us";
-import HowItWorks from "@/components/How It Works";
-import NavigationHeader from "@/components/Navigation header component";
-import HeroSection from "@/components/HeroSection component";
-import PropertySearch from "@/components/Property Search";
-import LatestNews from "@/components/Latest News";
-import ContactForm from "@/components/Contact Form";
+import AboutSection from "@/components/AboutUs";
+import ChefSpecials from "@/components/Chef'sSpecials";
+import ContactForm from "@/components/Contactform";
+import EventsSection from "@/components/Events";
+import FeaturedDishes from "@/components/FeaturedDishes";
+import GallerySection from "@/components/Gallery";
+import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
-//import AgentsSection from "@/components/Agents Section";
-import Footer from "@/components/Footer";
-import FeaturedProperties from "@/components/Featured Properties";
-//import NewsletterSubscription from "@/components/News";
-
+import LocationSection from "@/components/Location";
+import MenuHighlights from "@/components/MenuHighlights";
+import NavigationHeader from "@/components/Navigationheader";
+import Reservation from "@/components/Reservation";
+import SocialMediaLinks from "@/components/SocialMediaLinks";
+import Footer from "@/components/Footerwithlinks";
 export default function Home() {
   return (
     <>
       <NavigationHeader />
-      <HeroSection backgroundImage="/ai-background.png" />
+      <Hero />
       <AboutSection />
-      <FeaturedProperties />
-      <PropertySearch />
-      <HowItWorks />
+      <FeaturedDishes />
+      <MenuHighlights />
+      <ChefSpecials />
       <Testimonials />
-      <LatestNews />
+      <Reservation />
+      <GallerySection />
+      <EventsSection />
+      <LocationSection />
+      <SocialMediaLinks />
       <ContactForm />
       <Footer />
       {/* <Services />
