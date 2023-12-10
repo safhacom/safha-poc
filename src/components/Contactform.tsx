@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import { useState } from "react";
+import Image from "next/image";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    subject: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    subject: "",
   });
 
   const handleChange = (e) => {
@@ -30,8 +30,14 @@ const ContactForm = () => {
         transition={{ duration: 0.5 }}
         className="max-w-2xl mx-auto text-center mb-10"
       >
-        <h2 className="text-3xl font-bold text-charcoal-gray mb-4">Contact Us</h2>
-        <p className="text-olive-green">We're delighted that you've decided to reach out to us! Whether you have a question about our menu, want to make a reservation, or simply wish to share your dining experience, we're here to listen.</p>
+        <h2 className="text-3xl font-bold text-charcoal-gray mb-4">
+          Contact Us
+        </h2>
+        <p className="text-olive-green">
+          We're delighted that you've decided to reach out to us! Whether you
+          have a question about our menu, want to make a reservation, or simply
+          wish to share your dining experience, we're here to listen.
+        </p>
       </motion.div>
 
       <motion.div
