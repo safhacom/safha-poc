@@ -76,7 +76,7 @@ const HeaderSection: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="absolute top-0 left-0 w-full h-screen bg-pinky flex flex-col items-center justify-center"
+                className="absolute top-0 left-0 w-full h-screen bg-pinky flex flex-col items-center justify-center z-[100]"
               >
                 {navLinks.map((link) => (
                   <motion.a
