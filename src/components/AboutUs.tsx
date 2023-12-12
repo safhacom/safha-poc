@@ -1,124 +1,116 @@
-import { motion } from "framer-motion"
-import Image from "next/image"
-import React from "react"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FC } from "react";
 
-const AboutUs: React.FC = () => {
+const AboutUs: FC = () => {
   return (
     <section
-      className="bg-creamy-white text-charcoal-gray py-12 px-4"
+      className="bg-[#FFF8F0] text-[#273D2F] py-12 px-4 md:px-8 lg:px-16"
       id="about-us"
     >
-      <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl font-bold mb-6"
-        >
-          Our Story
-        </motion.h2>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-        >
-          <div>
-            <p className="mb-4">
-              Nestled in the heart of the city, our restaurant began as a dream
-              of two passionate food enthusiasts who wanted to bring an
-              unforgettable dining experience to the community. With a love for
-              culinary arts and a dedication to hospitality, we opened our doors
-              in 2010, aiming to serve not just meals, but memories. Our journey
-              has been one of passion, perseverance, and constant evolution, as
-              we've grown from a small bistro to a culinary destination. Our
-              walls are adorned with pictures that tell our story, from the
-              early days of recipe testing and kitchen trials to the
-              celebrations and accolades that have marked our growth. We invite
-              you to become a part of our ongoing story, to create your own
-              memories here, and to indulge in the love for food that is at the
-              very core of our establishment.
-            </p>
-            <p className="mb-4">
-              At the core of our restaurant is a simple philosophy: to provide
-              an exceptional dining experience that delights the senses and
-              nurtures the soul. We believe that a great meal is not just about
-              the food on the plate, but the environment in which it is enjoyed,
-              the people it is shared with, and the service that makes it
-              memorable. Our commitment to sustainability and ethical sourcing
-              means that we work closely with local farmers and producers,
-              ensuring that the freshest, highest-quality ingredients make their
-              way into our kitchen and onto your plate. We strive to innovate
-              while respecting culinary traditions, creating dishes that are
-              both familiar and exciting. Our team is dedicated to creating an
-              atmosphere where every guest feels valued, understood, and taken
-              care of from the moment they step through our doors.
-            </p>
-            <p className="mb-4">
-              Behind every dish that leaves our kitchen is a team of talented
-              and dedicated professionals who bring our culinary vision to life.
-              Our chefs are artists, our servers are storytellers, and our
-              managers are the glue that holds it all together. Each member of
-              our team is handpicked for their expertise, passion for
-              hospitality, and commitment to excellence. Our head chef brings a
-              wealth of experience and a creative flair to our menu, crafting
-              dishes that are both innovative and comforting. Our servers are
-              trained to provide impeccable service, ensuring that every guest's
-              experience is seamless and enjoyable. From the kitchen to the
-              dining room, our team works in harmony to create an environment
-              that is warm, welcoming, and distinctly ours.
-            </p>
-            <p className="mb-4">
-              Our menu is a reflection of our identity: diverse, vibrant, and
-              rooted in quality. We take pride in offering a range of dishes
-              that cater to a variety of tastes and dietary preferences,
-              including vegetarian, vegan, and gluten-free options. Each dish is
-              thoughtfully designed to balance flavors, textures, and aromas,
-              resulting in a symphony of taste with every bite. Seasonality is
-              key to our menu's design, as we aim to showcase the best of what
-              each season has to offer. From our signature appetizers to our
-              decadent desserts, every item is prepared with meticulous care and
-              an eye for detail. We also boast a curated selection of wines,
-              craft beers, and artisanal cocktails to complement your meal and
-              enhance your dining experience.
-            </p>
-            <p>
-              We believe that our restaurant is more than a place to eat; it's a
-              part of the community. As such, we are committed to giving back
-              and fostering a sense of togetherness. We regularly participate in
-              local events, support charitable causes, and collaborate with
-              other businesses to strengthen the bonds within our neighborhood.
-              Our community table events are a testament to this commitment,
-              where we invite locals to come together and share a meal, sparking
-              conversations and building relationships. We also offer cooking
-              classes and workshops, sharing our knowledge and passion for food
-              with those eager to learn. Our restaurant is not just a business;
-              it's a place where community thrives and where we can make a
-              positive impact on the lives of those around us.
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <Image
-                src="/how-to-win-friends.png"
-                alt="About Us"
-                width={500}
-                height={300}
-                className="rounded-lg"
-              />
-            </motion.div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  )
-}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="text-3xl font-bold text-[#C59A77] mb-6">Our Story</h2>
+        <p className="mb-4">
+          Nestled in the heart of the city, our restaurant's story began over a
+          decade ago with a simple mission: to serve authentic, delicious
+          cuisine in a welcoming atmosphere. Our founders, two culinary
+          enthusiasts with a shared passion for food and community, embarked on
+          a journey to create a dining experience that would celebrate local
+          flavors and global culinary traditions. Over the years, we've grown
+          from a cozy eatery to a beloved dining destination, all while
+          maintaining the warmth and personal touch that our patrons have come
+          to cherish. Our walls are adorned with photographs that chronicle our
+          journey, capturing moments of joy, laughter, and the many faces that
+          have contributed to our story.
+        </p>
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/bg_res.png"
+            alt="Our Story"
+            width={600}
+            height={400}
+            className="rounded-lg"
+          />
+        </div>
 
-export default AboutUs
+        <h3 className="text-2xl font-bold text-[#C59A77] mb-4">
+          Our Philosophy
+        </h3>
+        <p className="mb-4">
+          At the core of our restaurant is a philosophy that intertwines the art
+          of cooking with the joy of eating. We believe that a meal is not just
+          about the food on the plate but the memories it creates. Our chefs are
+          dedicated to sourcing the freshest ingredients, supporting local
+          farmers, and crafting dishes that inspire and delight. We take pride
+          in our innovative menu that pays homage to classic recipes while
+          embracing contemporary twists. Our commitment to sustainability and
+          community is unwavering, as we strive to make a positive impact both
+          on the environment and in the lives of our guests.
+        </p>
+
+        <h3 className="text-2xl font-bold text-[#C59A77] mb-4">Our Team</h3>
+        <p className="mb-4">
+          Our team is the heartbeat of our restaurant. From the talented chefs
+          in the kitchen to the attentive staff on the floor, each member plays
+          a crucial role in delivering an exceptional dining experience. Our
+          chefs bring a wealth of experience and a spirit of innovation to our
+          kitchen, constantly experimenting with flavors and techniques to craft
+          dishes that are both familiar and surprising. Our service team is
+          trained to provide not just service, but hospitality that makes every
+          guest feel at home. We invest in our staff's growth and well-being
+          because we believe that a happy team leads to happy guests.
+        </p>
+
+        <h3 className="text-2xl font-bold text-[#C59A77] mb-4">Our Menu</h3>
+        <p className="mb-4">
+          Our menu is a reflection of our culinary journey, offering a variety
+          of dishes that cater to diverse palates and dietary preferences. Each
+          dish tells a story, whether it's a family recipe passed down through
+          generations or a creative fusion inspired by our chefs' travels. We
+          take pride in our seasonal menu, which features the best of what the
+          current harvest has to offer, ensuring that every ingredient shines.
+          From appetizers that awaken the palate to entrees that satisfy the
+          soul and desserts that indulge the sweet tooth, our menu is designed
+          to take you on a flavorful adventure.
+        </p>
+
+        <h3 className="text-2xl font-bold text-[#C59A77] mb-4">
+          Our Commitment to Quality
+        </h3>
+        <p className="mb-4">
+          Quality is the cornerstone of everything we do. We meticulously select
+          our ingredients, choosing organic and non-GMO options whenever
+          possible. Our kitchen adheres to the highest standards of cleanliness
+          and food safety, ensuring that every meal is not only delicious but
+          also prepared with the utmost care. We maintain strong relationships
+          with our suppliers, ensuring that we receive the best produce, meats,
+          and seafood available. Our dedication to quality extends beyond the
+          plate, as we carefully curate our wine list, craft cocktails, and
+          artisanal beverages to complement our culinary offerings.
+        </p>
+
+        <h3 className="text-2xl font-bold text-[#C59A77] mb-4">
+          Join Our Community
+        </h3>
+        <p className="mb-4">
+          We believe that dining is a communal experience, and our restaurant is
+          a place where connections are made and stories are shared. We invite
+          you to join our community, whether it's for a casual lunch, a family
+          celebration, or a special date night. Follow us on social media to
+          stay updated on our latest events, seasonal specials, and culinary
+          workshops. Sign up for our newsletter to receive exclusive offers and
+          behind-the-scenes looks. At our restaurant, you're not just a
+          customer; you're part of a family that celebrates life's delicious
+          moments together.
+        </p>
+      </motion.div>
+    </section>
+  );
+};
+
+export default AboutUs;

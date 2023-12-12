@@ -1,70 +1,129 @@
 import { useState } from "react";
 import Link from "next/link";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { motion } from "framer-motion";
 
-const NavigationHeader: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const menuItems = [
-    "Starters",
-    "Main Courses",
-    "Desserts",
-    "Beverages",
-    "Special Diets",
-    "Seasonal Offers",
-    "Kids Menu",
-    "Wine List",
-  ];
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    section?.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false);
+  };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-creamy-white border-b border-gray-200 z-50">
-      <div className="flex justify-between items-center px-4 py-2 md:px-6 lg:px-8">
-        <Link href="/" className="text-charcoal-gray font-bold text-xl">
-          <img src="/icon.png" alt="Restaurant Logo" className="h-8 md:h-10" />
-        </Link>
-        <nav className="hidden md:block">
-          <ul className="flex space-x-4">
-            {menuItems.map((item) => (
-              <li key={item} className="text-charcoal-gray hover:text-warm-red">
-                <a
-                  href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
-                  className="text-sm md:text-base lg:text-lg"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <button
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="fixed w-full z-10 bg-[#A37C40] backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 text-[#273D2F] font-UbuntuMono"
+    >
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <Link
+          href="/"
+          className="text-2xl font-bold"
+          onClick={() => scrollToSection("hero")}
         >
-          {isMenuOpen ? (
-            <XIcon className="h-6 w-6 text-charcoal-gray" />
-          ) : (
-            <MenuIcon className="h-6 w-6 text-charcoal-gray" />
-          )}
-        </button>
-      </div>
-      {isMenuOpen && (
-        <div className="absolute top-0 left-0 w-full bg-creamy-white p-4">
-          <ul className="flex flex-col space-y-4">
-            {menuItems.map((item) => (
-              <li key={item} className="text-charcoal-gray hover:text-warm-red">
-                <a
-                  href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
-                  className="text-lg"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
+          Logo
+        </Link>
+        <div className="hidden md:flex space-x-4">
+          <Link
+            href="/"
+            className="hover:text-[#DAA49A]"
+            onClick={() => scrollToSection("hero")}
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            className="hover:text-[#DAA49A]"
+            onClick={() => scrollToSection("about")}
+          >
+            About
+          </Link>
+          <Link
+            href="/menu"
+            className="hover:text-[#DAA49A]"
+            onClick={() => scrollToSection("menu")}
+          >
+            Menu
+          </Link>
+          <Link
+            href="/reservations"
+            className="hover:text-[#DAA49A]"
+            onClick={() => scrollToSection("reservations")}
+          >
+            Reservations
+          </Link>
+          <Link
+            href="/contact"
+            className="hover:text-[#DAA49A]"
+            onClick={() => scrollToSection("contact")}
+          >
+            Contact
+          </Link>
         </div>
-      )}
-    </header>
+        <div className="md:hidden">
+          <button onClick={handleToggle}>
+            {isOpen ? (
+              <XIcon className="h-6 w-6" />
+            ) : (
+              <MenuIcon className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+      </div>
+      <motion.div
+        initial={{ x: "-100%" }}
+        animate={{ x: isOpen ? 0 : "-100%" }}
+        transition={{ type: "spring", stiffness: 75 }}
+        className={`absolute top-0 left-0 w-full h-screen bg-[#FFF8F0] p-4 flex flex-col space-y-4 justify-center items-center ${
+          isOpen ? "block" : "hidden"
+        }`}
+      >
+        <Link
+          href="/"
+          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
+          onClick={() => scrollToSection("hero")}
+        >
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
+          onClick={() => scrollToSection("about")}
+        >
+          About
+        </Link>
+        <Link
+          href="/menu"
+          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
+          onClick={() => scrollToSection("menu")}
+        >
+          Menu
+        </Link>
+        <Link
+          href="/reservations"
+          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
+          onClick={() => scrollToSection("reservations")}
+        >
+          Reservations
+        </Link>
+        <Link
+          href="/contact"
+          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
+          onClick={() => scrollToSection("contact")}
+        >
+          Contact
+        </Link>
+      </motion.div>
+    </motion.nav>
   );
 };
 
-export default NavigationHeader;
+export default Navbar;

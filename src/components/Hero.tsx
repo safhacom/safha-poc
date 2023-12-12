@@ -4,48 +4,41 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative h-screen flex flex-col justify-center items-center text-center bg-[#FFF8F0]">
       <motion.div
-        initial={{ scale: 0.9 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="absolute inset-0 h-[500px] w-full overflow-hidden"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="absolute inset-0 z-0"
       >
         <Image
-          src="/bg_res.png"
-          alt="Restaurant Signature Dish"
+          src="/bg_res.png" // replace with your image path
           layout="fill"
           objectFit="cover"
-          className="transition-opacity duration-300 ease-in-out"
+          quality={100}
+          className="filter brightness-50"
+          alt="hi"
         />
-        <div className="absolute inset-0 bg-[#F5F5F5] bg-opacity-30 backdrop-filter backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-[#273D2F] opacity-50"></div>
       </motion.div>
-      <div className="relative flex flex-col items-center justify-center h-[500px] px-4 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#36454F]"
+      <motion.div
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="z-10 p-4 backdrop-filter backdrop-blur-sm border border-gray-200 rounded-lg"
+      >
+        <h1 className="text-4xl md:text-6xl font-bold text-[#C59A77] mb-6">
+          To provide an unforgettable dining experience that delights the
+          senses, fosters connections, and celebrates the diversity of flavors
+          from around the world.
+        </h1>
+        <a
+          href="#menu"
+          className="inline-block px-6 py-3 text-lg font-medium bg-[#DAA49A] text-white rounded-md shadow-md hover:bg-[#C59A77] focus:outline-none focus:ring-2 focus:ring-[#DAA49A] focus:ring-opacity-50 transition duration-300"
         >
-          Savor the Symphony of Authentic Flavors
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-4 text-xl md:text-2xl text-[#FD7E14]"
-        >
-          Where Every Meal is a Masterpiece
-        </motion.p>
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-          className="mt-8 px-6 py-3 bg-[#E53E3E] text-white rounded-md shadow-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-        >
-          Explore Our Menu
-        </motion.button>
-      </div>
+          Discover Our Menu
+        </a>
+      </motion.div>
     </div>
   );
 };
