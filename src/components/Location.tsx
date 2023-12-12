@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
+import { motion } from "framer-motion"
+import Image from "next/image"
+import { useState } from "react"
 
 const LocationSection = () => {
-  const [selectedBranch, setSelectedBranch] = useState(null);
+  const [selectedBranch, setSelectedBranch] = useState<any>(null)
 
   const branchLocations = [
     {
@@ -13,7 +13,7 @@ const LocationSection = () => {
         "Vibrant, music-filled downtown spot with a tailored menu that highlights regional specialties.",
     },
     // ... other branch locations
-  ];
+  ]
 
   return (
     <div className="bg-FFF8F0 text-273D2F font-ubuntu-mono">
@@ -108,7 +108,7 @@ const LocationSection = () => {
         {/* ... other subsections like Accessibility, Catering and Events, Seasonal Pop-Up Locations, International Locations ... */}
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default LocationSection;
+export default LocationSection
