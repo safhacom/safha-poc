@@ -1,116 +1,113 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { MapPin, Phone, Mail } from "react-feather";
+import { useState } from "react";
 
 const LocationSection = () => {
+  const [selectedBranch, setSelectedBranch] = useState(null);
+
+  const branchLocations = [
+    {
+      name: "Downtown Spot",
+      image: "/map.png",
+      description:
+        "Vibrant, music-filled downtown spot with a tailored menu that highlights regional specialties.",
+    },
+    // ... other branch locations
+  ];
+
   return (
-    <section className="bg-creamy-white text-charcoal-gray py-10 px-5 md:px-10 lg:px-20">
+    <div className="bg-FFF8F0 text-273D2F font-ubuntu-mono">
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="max-w-6xl mx-auto"
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        className="text-center py-10"
       >
-        <h2 className="text-3xl font-bold mb-4">
-          Welcome to Our Prime Location
+        <h2 className="text-2xl md:text-4xl font-bold text-C59A77 mb-4">
+          Our Locations
         </h2>
-        <p className="mb-6">
-          Nestled in the heart of the city, our restaurant offers a prime spot
-          for both locals and tourists alike. Easily accessible by public
-          transportation, our location is just a stone's throw away from the
-          bustling city center, surrounded by vibrant shops and cultural
-          landmarks. Our welcoming facade and the warm glow from our windows
-          invite you in for an unforgettable dining experience.
+        <p className="mb-10">
+          Discover our various locations and enjoy an unforgettable dining
+          experience.
         </p>
-        <div className="relative mb-6">
-          <Image
-            src="/map.png"
-            alt="Map"
-            layout="responsive"
-            width={700}
-            height={400}
-            className="rounded-lg shadow-lg"
-          />
+
+        <div className="mb-10">
           <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
           >
-            <MapPin color="#FD7E14" size={40} />
+            <h3 className="text-xl md:text-3xl font-semibold text-C59A77 mb-2">
+              Our Main Location
+            </h3>
+            <p className="mb-6">
+              Nestled in the heart of the bustling downtown district, our
+              flagship restaurant offers a culinary escape from the ordinary.
+            </p>
+            <Image
+              src="/map.png"
+              alt="Main Location"
+              width={600}
+              height={400}
+              className="rounded-lg mb-4"
+            />
+            <button className="bg-DAA49A text-white px-6 py-2 rounded-full font-medium hover:bg-DAA49A/80 transition duration-300">
+              Find Us
+            </button>
           </motion.div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-          <div className="mb-4 md:mb-0">
-            <h3 className="font-bold text-lg">
-              Contact Information and Reservations
-            </h3>
-            <p className="flex items-center">
-              <Phone size={16} className="mr-2" />
-              +1 (555) 123-4567
-            </p>
-            <p className="flex items-center">
-              <Mail size={16} className="mr-2" />
-              contact@example.com
-            </p>
+
+        <div className="mb-10">
+          <h3 className="text-xl md:text-3xl font-semibold text-C59A77 mb-2">
+            Branch Locations
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {branchLocations.map((branch, index) => (
+              <div
+                key={index}
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4"
+                onClick={() => setSelectedBranch(branch)}
+              >
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <Image
+                    src={branch.image}
+                    alt={branch.name}
+                    width={300}
+                    height={200}
+                    className="rounded-lg mb-2"
+                  />
+                  <p className="font-medium mb-1">{branch.name}</p>
+                  <p className="text-sm mb-4">{branch.description}</p>
+                  <button className="bg-9E4624 text-white px-4 py-1 rounded-full text-xs font-medium hover:bg-9E4624/80 transition duration-300">
+                    View Details
+                  </button>
+                </motion.div>
+              </div>
+            ))}
           </div>
-          <button className="bg-olive-green text-creamy-white font-bold py-2 px-4 rounded-lg shadow hover:bg-green-700 transition-colors">
-            Get Directions
+        </div>
+
+        <div className="mb-10">
+          <h3 className="text-xl md:text-3xl font-semibold text-C59A77 mb-2">
+            Reservations and Private Dining
+          </h3>
+          <p className="mb-6">
+            Planning a special evening or a group event? Our main and select
+            branch locations offer reservation services to ensure your dining
+            experience is seamless and personalized.
+          </p>
+          <button className="bg-9E4624 text-white px-6 py-2 rounded-full font-medium hover:bg-9E4624/80 transition duration-300">
+            Book Now
           </button>
         </div>
-        <div className="space-y-4">
-          <p>
-            Elegant Interior and Ambiance: Step inside and be greeted by the
-            elegant decor that perfectly balances modernity and tradition. Our
-            restaurant's interior is designed to provide a comfortable and
-            luxurious dining atmosphere. From the plush seating to the ambient
-            lighting, every detail has been carefully curated to enhance your
-            meal and create a memorable ambiance.
-          </p>
-          <p>
-            Private Dining and Events: Looking for an exclusive space for your
-            special occasions? Our restaurant features private dining rooms that
-            can be reserved for intimate gatherings, business meetings, or
-            celebratory events. Each room is equipped with state-of-the-art
-            audiovisual technology, ensuring that your event runs smoothly and
-            leaves a lasting impression on your guests.
-          </p>
-          <p>
-            Outdoor Seating with a View: Enjoy your meal al fresco in our
-            outdoor seating area, which boasts a stunning view of the cityscape.
-            Whether you're looking to enjoy a quiet dinner under the stars or a
-            lively brunch in the sunshine, our terrace provides the perfect
-            setting. The outdoor area is also pet-friendly, so feel free to
-            bring along your furry companions.
-          </p>
-          <p>
-            Convenient Parking and Accessibility: We understand the importance
-            of convenience, which is why our restaurant offers ample parking
-            space for our guests. In addition, our location is fully accessible,
-            with ramps and facilities to accommodate all our patrons, ensuring a
-            comfortable experience for everyone.
-          </p>
-          <p>
-            Local Attractions and Activities: Make the most of your visit by
-            exploring the local attractions surrounding our restaurant. From art
-            galleries and theaters to parks and historical sites, there's plenty
-            to see and do within walking distance. Our staff is more than happy
-            to provide recommendations and assist with any arrangements you may
-            need.
-          </p>
-          <p>
-            Sustainable Practices and Community Engagement: We take pride in our
-            commitment to sustainability and community involvement. Our
-            restaurant is not just a place to eat; it's a part of the
-            neighborhood. We source ingredients from local farmers, participate
-            in community events, and implement eco-friendly practices to
-            minimize our environmental footprint.
-          </p>
-        </div>
+
+        {/* ... other subsections like Accessibility, Catering and Events, Seasonal Pop-Up Locations, International Locations ... */}
       </motion.div>
-    </section>
+    </div>
   );
 };
 
