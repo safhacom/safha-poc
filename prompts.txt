@@ -775,3 +775,226 @@ Give your answer as a single usable nextjs component
 
 ### Content ###
 Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for HeaderSection of a landing page website
+
+### Website general info ###
+Name: Enaba Store
+Value from website: Display enaba store products
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 CupCakesSection, 5 PricingSection, 6 FooterSection
+Menu: About Enabas Pricing
+Color Palette: #304D30 named "green", #EEF0E5 named "sugar", and #B6C4B6 named "mint"
+Font Family: silkscreen
+Website vision: enaba products store
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Header Menu ###
+About id="about-section"  Enabas id="enabas-section" Pricing id="pricing-section"
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has logo on the middle and menu items on the far right side
+
+### Component design ###
+The design is green background with white text
+
+### Colors ###
+Uses already defined Tailwindcss colors green and sugar and mint
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily silkscreen
+
+### Mobile responsiveness ###
+The component is mobile responsive with collapsable hamburger menu with fullscreen reveal menu on menu item click the mobile menu is closed the mobile fullscreen menu has top z index
+
+### Behaviour ###
+The menu scrolls section into view
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for HeroSection of a landing page website
+
+### Website general info ###
+Name: Enaba Store
+Value from website: Display enaba store products
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 CupCakesSection, 5 PricingSection, 6 FooterSection
+Menu: About Enabas Pricing
+Color Palette: #304D30 named "green", #EEF0E5 named "sugar", and #B6C4B6 named "mint"
+Font Family: silkscreen
+Website vision: enaba products store
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Hero Text ###
+Title: Enaba makes the best warg enab
+Description: insert-ai-generated text 
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has full width background with light black shade on top of it the text container is centered that is not full width
+
+### Component design ###
+The hero text is white ans the title is bold
+
+### Colors ###
+Uses already defined Tailwindcss colors green and sugar and mint
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily silkscreen
+
+### Mobile responsiveness ###
+The component is mobile responsive with smaller text on mobile
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for AboutSection of a landing page website
+
+### Website general info ###
+Name: Enaba Store
+Value from website: Display enaba store products
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 CupCakesSection, 5 PricingSection, 6 FooterSection
+Menu: About Enabas Pricing
+Color Palette: #304D30 named "green", #EEF0E5 named "sugar", and #B6C4B6 named "mint"
+Font Family: silkscreen
+Website vision: enaba products store
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### About Text ###
+Title: Hands down the best in town
+Description: insert-ai-generated short text about enaba product
+
+### About Images ###
+Enaba product 1
+Enaba product 2
+Enaba product 3
+Enaba product 4
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has white background with green text layout has title text bolded and a little bigger than description text underneath it it has a 2 column grid of the product images bordered and with shadow with reveal animation and hover animation
+
+### Colors ###
+Uses already defined Tailwindcss colors green and sugar and mint
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily silkscreen
+
+### Mobile responsiveness ###
+The component is mobile responsive with smaller text on mobile and 1 column grid images
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for PricingSection of a landing page website
+
+### Website general info ###
+Name: Enaba Store
+Value from website: Display enaba store products
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 PricingSection, 5 FooterSection
+Menu: About Enabas Pricing
+Color Palette: #304D30 named "green", #EEF0E5 named "sugar", and #B6C4B6 named "mint"
+Font Family: silkscreen
+Website vision: enaba products store
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Pricings ###
+Package Eater: 24 for 99 SR
+Package Humble: 32 for 128 SR
+Package Glutenous: 48 for 200 SR
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component is 3 column of card of each package wth title and cheeky short selling marketing description the card has hover raise up animation with border and shadow the section has mint background with sugar text coloe on the card and the card background is green
+
+### Colors ###
+Uses already defined Tailwindcss colors green and sugar and mint
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily silkscreen
+
+### Mobile responsiveness ###
+The component is mobile responsive with smaller text on mobile and 1 column cards
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed

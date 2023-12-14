@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        pinky: "#FF90BC ",
-        sun: "#F9F9E0",
-        sky: "#8ACDD7",
+        green: "#304D30",
+        sugar: "#EEF0E5",
+        mint: "#B6C4B6",
       },
       fontFamily: {
         silkscreen: ["Silkscreen", "monospace"],
