@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        purple: "#610C9F",
-        pinky: "#940B92",
-        raw: "#E95793",
+        ink: "#2A2F4F",
+        comfort: "#917FB3",
+        fem: "#FDE2F3",
       },
       fontFamily: {
-        rubik_bubbles: ["Rubik Bubbles", "cursive"],
+        pacifico: ["Pacifico", "cursive"],
       },
     },
   },

@@ -1,98 +1,90 @@
 // components/HeaderSection.tsx
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
+import Image from "next/image"
 import { useState } from "react"
 
 const HeaderSection: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  const menuItems = [
+    { name: "About", section: "about-section" },
+    { name: "Abayas", section: "abayas-section" },
+    { name: "Company", section: "company-section" },
+  ]
+
   const scrollToSection = (sectionId: string) => {
     setIsMobileMenuOpen(false)
     const section = document.getElementById(sectionId)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
     <motion.header
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-0 z-50 w-full bg-purple text-raw shadow-lg font-rubik_bubbles"
+      className="fixed top-0 left-0 w-full bg-ink text-white z-50"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
     >
-      <div className="flex justify-between items-center p-4 md:p-6">
-        <div className="text-center">
-          <img src="/game.png" alt="Game Gym Logo" width={60} height={40} />
+      <div className="flex justify-between items-center p-5 max-w-screen-xl mx-auto">
+        <div className="flex-grow flex justify-center">
+          <Image
+            src="/icon.png"
+            alt="Abaya Express Logo"
+            width={60}
+            height={60}
+          />
         </div>
 
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            <li
-              className="cursor-pointer"
-              onClick={() => scrollToSection("about-section")}
+        <nav className="hidden md:flex space-x-8">
+          {menuItems.map((item) => (
+            <a
+              key={item.name}
+              onClick={() => scrollToSection(item.section)}
+              className="cursor-pointer hover:text-fem transition-colors duration-300"
             >
-              About
-            </li>
-            <li
-              className="cursor-pointer"
-              onClick={() => scrollToSection("games-section")}
-            >
-              Games
-            </li>
-            <li
-              className="cursor-pointer"
-              onClick={() => scrollToSection("companies-section")}
-            >
-              Companies
-            </li>
-          </ul>
+              {item.name}
+            </a>
+          ))}
         </nav>
 
         <div className="md:hidden">
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="outline-none focus:outline-none"
-          >
-            {isMobileMenuOpen ? (
-              <XIcon className="w-8 h-8" />
-            ) : (
-              <MenuIcon className="w-8 h-8" />
-            )}
-          </button>
+          <MenuIcon
+            className="w-8 h-8 cursor-pointer"
+            onClick={() => setIsMobileMenuOpen(true)}
+          />
         </div>
-      </div>
 
-      {isMobileMenuOpen && (
-        <motion.div
-          className="absolute top-0 left-0 w-full h-screen bg-purple flex flex-col items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          style={{ zIndex: 1000 }}
-        >
-          <ul>
-            <li
-              className="py-2 text-2xl cursor-pointer"
-              onClick={() => scrollToSection("about-section")}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              className="fixed inset-0 bg-ink p-5 flex flex-col items-center justify-center"
+              style={{ zIndex: 1000 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             >
-              About
-            </li>
-            <li
-              className="py-2 text-2xl cursor-pointer"
-              onClick={() => scrollToSection("games-section")}
-            >
-              Games
-            </li>
-            <li
-              className="py-2 text-2xl cursor-pointer"
-              onClick={() => scrollToSection("companies-section")}
-            >
-              Companies
-            </li>
-          </ul>
-        </motion.div>
-      )}
+              <XIcon
+                className="w-8 h-8 mb-8 cursor-pointer"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+              {menuItems.map((item) => (
+                <motion.a
+                  key={item.name}
+                  onClick={() => scrollToSection(item.section)}
+                  className="cursor-pointer text-white text-xl mb-5"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 50 }}
+                  transition={{ ease: "easeOut", duration: 0.3 }}
+                >
+                  {item.name}
+                </motion.a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </motion.header>
   )
 }

@@ -6,14 +6,12 @@ const FooterSection: React.FC = () => {
 
   return (
     <motion.footer
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="bg-purple text-center py-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.5 }}
+      className="bg-comfort text-white text-center p-4 text-sm font-pacifico"
     >
-      <p className="text-white text-sm font-rubik_bubbles">
-        © {currentYear} Game Gym. All rights reserved.
-      </p>
+      <p>© {currentYear} Abaya Express. All rights reserved.</p>
     </motion.footer>
   )
 }

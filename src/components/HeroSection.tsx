@@ -1,46 +1,28 @@
 // components/HeroSection.tsx
 import { motion } from "framer-motion"
-import Image from "next/image"
 
 const HeroSection: React.FC = () => {
-  // Background and text animation variants for framer-motion
-  const backgroundVariant = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: 1 } },
-  }
-
-  const textVariant = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1, transition: { delay: 0.5, duration: 1 } },
-  }
+  // Customize this marketing text accordingly.
+  const heroText =
+    "Discover the elegance and sophistication of Abaya Express, where tradition elegantly meets modern style."
 
   return (
     <motion.section
-      initial="initial"
-      animate="animate"
-      className="relative h-screen flex items-center justify-center"
+      id="hero-section"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="bg-white text-fem font-pacifico text-center py-24 px-4 mt-8"
+      transition={{ duration: 1 }}
     >
       <motion.div
-        variants={backgroundVariant}
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="mx-auto max-w-4xl"
+        initial={{ y: "30px", opacity: 0 }}
+        animate={{ y: "0px", opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
       >
-        {/* Placeholder for AI generated full width background image */}
-        <Image
-          src="/uxuidesign.png"
-          alt="Game Gym Background"
-          fill
-          className="object-cover"
-          quality={100}
-        />
-        <div className="absolute inset-0 bg-purple bg-opacity-30"></div>
+        <h1 className="text-5xl md:text-6xl">{heroText}</h1>
       </motion.div>
-
-      <motion.h2
-        variants={textVariant}
-        className="z-10 text-white font-rubik_bubbles text-4xl md:text-6xl lg:text-8xl text-center"
-      >
-        Welcome to Game Gym
-      </motion.h2>
     </motion.section>
   )
 }
