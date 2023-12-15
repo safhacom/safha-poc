@@ -6,8 +6,8 @@ export default function AppHead() {
     url: "https://safha-web.vercel.app",
     identifierURL: "https://safha-web.vercel.app",
     title: "Safha - AI Powered Website Builder",
-    description: `The SaaS company in question specializes in a cutting-edge text-to-website platform. It's named "WebWord Wizardry". This innovative platform transforms plain text into fully functional and aesthetically pleasing websites with just a few clicks. It uses advanced AI algorithms to interpret text input, understanding the context and intended layout. Users can simply type or paste their content, and the platform intelligently organizes it into a web-friendly format, choosing suitable fonts, colors, and layouts that best fit the text's tone and purpose.`,
-    subject: `The SaaS company in question specializes in a cutting-edge text-to-website platform. It's named "WebWord Wizardry". This innovative platform transforms plain text into fully functional and aesthetically pleasing websites with just a few clicks. It uses advanced AI algorithms to interpret text input, understanding the context and intended layout. Users can simply type or paste their content, and the platform intelligently organizes it into a web-friendly format, choosing suitable fonts, colors, and layouts that best fit the text's tone and purpose.`,
+    description: `The SaaS company Safha.com specializes in a cutting-edge AI text-to-website and business enablement platform. Safha.com innovative platform transforms plain text into fully functional and aesthetically pleasing websites with just a few clicks. It uses advanced AI algorithms to interpret text input, understanding the context and intended layout. Users can simply type or paste their content, and the platform intelligently organizes it into a web-friendly format, choosing suitable fonts, colors, and layouts that best fit the text's tone and purpose.`,
+    subject: `The SaaS company Safha.com specializes in a cutting-edge AI text-to-website and business enablement platform. Safha.com innovative platform transforms plain text into fully functional and aesthetically pleasing websites with just a few clicks. It uses advanced AI algorithms to interpret text input, understanding the context and intended layout. Users can simply type or paste their content, and the platform intelligently organizes it into a web-friendly format, choosing suitable fonts, colors, and layouts that best fit the text's tone and purpose.`,
     copyright: "Safha",
     language: "en",
     robots: "all",
@@ -36,10 +36,10 @@ export default function AppHead() {
       telephone: false,
     },
     openGraph: {
-      title: "Safha - AI ",
-      description: `The SaaS company in question specializes in a cutting-edge text-to-website platform. It's named "WebWord Wizardry". This innovative platform transforms plain text into fully functional and aesthetically pleasing websites with just a few clicks. It uses advanced AI algorithms to interpret text input, understanding the context and intended layout. Users can simply type or paste their content, and the platform intelligently organizes it into a web-friendly format, choosing suitable fonts, colors, and layouts that best fit the text's tone and purpose.`,
+      title: "Safha - AI Powered Website Builder",
+      description: `The SaaS company Safha.com specializes in a cutting-edge AI text-to-website and business enablement platform. Safha.com innovative platform transforms plain text into fully functional and aesthetically pleasing websites with just a few clicks. It uses advanced AI algorithms to interpret text input, understanding the context and intended layout. Users can simply type or paste their content, and the platform intelligently organizes it into a web-friendly format, choosing suitable fonts, colors, and layouts that best fit the text's tone and purpose.`,
       url: "https://safha-web.vercel.app",
-      siteName: "Safha - AI ",
+      siteName: "Safha - AI Powered Website Builder",
       images: [
         {
           key: "md",
@@ -61,8 +61,8 @@ export default function AppHead() {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Safha - AI ",
-      description: `The SaaS company in question specializes in a cutting-edge text-to-website platform. It's named "WebWord Wizardry". This innovative platform transforms plain text into fully functional and aesthetically pleasing websites with just a few clicks. It uses advanced AI algorithms to interpret text input, understanding the context and intended layout. Users can simply type or paste their content, and the platform intelligently organizes it into a web-friendly format, choosing suitable fonts, colors, and layouts that best fit the text's tone and purpose.`,
+      title: "Safha - AI Powered Website Builder",
+      description: `The SaaS company Safha.com specializes in a cutting-edge AI text-to-website and business enablement platform. Safha.com innovative platform transforms plain text into fully functional and aesthetically pleasing websites with just a few clicks. It uses advanced AI algorithms to interpret text input, understanding the context and intended layout. Users can simply type or paste their content, and the platform intelligently organizes it into a web-friendly format, choosing suitable fonts, colors, and layouts that best fit the text's tone and purpose.`,
       siteId: "@SafhaSA",
       creator: "@SafhaSA",
       creatorId: "@SafhaSA",
