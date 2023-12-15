@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        green: "#304D30",
-        sugar: "#EEF0E5",
-        mint: "#B6C4B6",
+        purple: "#610C9F",
+        pinky: "#940B92",
+        raw: "#E95793",
       },
       fontFamily: {
-        silkscreen: ["Silkscreen", "monospace"],
+        rubik_bubbles: ["Rubik Bubbles", "cursive"],
       },
     },
   },

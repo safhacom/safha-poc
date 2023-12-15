@@ -998,3 +998,60 @@ Give your answer as a single usable nextjs component
 
 ### Content ###
 Generate all content needed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Instructions ###
+You are a web developer that will generate a react component for HeaderSection of a landing page website
+
+### Website general info ###
+Name: Game Gym
+Value from website: Display enaba store products
+Website Type: Single Page
+Sections total: 6 sections
+Scroll to section behavior: smooth scrolling Sections: 1 HeaderSection, 2 HeroSection, 3 AboutSection, 4 GamesSection, 5 CompaniesSection, 6 FooterSection
+Menu: About Games Companies
+Color Palette: #610C9F named "purple", #940B92 named "pinky", and #E95793 named "raw"
+Font Family: silkscreen
+Website vision: Showcase game gym
+Design features: cool css clipping with cool background and images, minimal, modren, spacious, uses light borders and shadows, as well as glass effect and gradient colors
+Animation: Uses framer motion on every section to reveal as well as scrolling animation
+
+### Header Menu ###
+About id="about-section"  Games id="games-section" Companies id="companies-section"
+
+### framework ###
+nextjs
+
+### Programming language ###
+TypeScript
+
+### Styles ###
+Uses TailwindCSS
+
+### Component layout ###
+The component has logo image on the middle and center and menu items on the far right side
+
+### Component design ###
+The design is purple background with raw text
+
+### Colors ###
+Uses already defined Tailwindcss colors purple and pinky and raw
+
+### Font family ###
+Uses already defined Tailwindcss fontFamily rubik_bubbles
+
+### Mobile responsiveness ###
+The component is mobile responsive with collapsable hamburger menu with fullscreen reveal menu on menu item click the mobile menu is closed the mobile fullscreen menu has top z index
+
+### Behaviour ###
+The menu scrolls section into view
+
+### Animations ###
+Uses framer-motion library with text reveal effect and fade-in effect for mobile screen mobile menu
+
+### Output ###
+Give your answer as a single usable nextjs component
+
+### Content ###
+Generate all content needed
