@@ -28,8 +28,10 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setGenerating(false)
-    setPrompt("")
+    return () => {
+      setGenerating(false)
+      setPrompt("")
+    }
   }, [])
 
   return (
