@@ -31,7 +31,7 @@ export default function Home() {
     <div className="w-full h-screen relative">
       <img
         src="/logo.png"
-        className=" absolute top-16 right-32 z-50"
+        className="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center z-50"
         width={200}
         height={200}
       />
@@ -39,7 +39,7 @@ export default function Home() {
       <div className="absolute w-full xl:w-fit px-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-8">
         <div className="relative w-full">
           <textarea
-            className="xl:w-[600px] w-full h-64 border-4 border-secondary outline-none rounded-md shadow-lg bg-secondary placeholder:text-black/50 bg-opacity-30 text-3xl p-4"
+            className="xl:w-[600px] w-full xl:h-64 h-80 border-4 border-secondary outline-none rounded-md shadow-lg bg-secondary placeholder:text-black/50 bg-opacity-30 text-3xl p-4"
             value={prompt}
             placeholder={prompt_template}
             autoFocus
@@ -78,8 +78,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center font-medium text-xl">
-        <p className="animate-pulse">
+      <div className="absolute bottom-4 w-full p-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center font-medium text-xl">
+        <p className="animate-pulse text-sm xl:text-xl">
           The future is jobless. The future is independent. The future is free.
         </p>
       </div>

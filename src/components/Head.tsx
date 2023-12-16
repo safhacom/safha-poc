@@ -48,13 +48,6 @@ export default function AppHead() {
           width: 800,
           height: 600,
         },
-        {
-          key: "lg",
-          url: `/main-lg.png`,
-          width: 1800,
-          height: 1600,
-          alt: "Safha logo in a banner",
-        },
       ],
       locale: "en",
       type: "website",
