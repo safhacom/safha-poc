@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Home() {
   const router = useRouter()
@@ -20,12 +20,13 @@ export default function Home() {
     const website = Math.floor(Math.random() * 10) + 1
     setTimeout(() => {
       router.push(`https://safha-web-git-safha-web-${website}-yat.vercel.app`)
-      setTimeout(() => {
-        setGenerating(false)
-        setPrompt("")
-      }, 5000)
     }, 5000)
   }
+
+  useEffect(() => {
+    setGenerating(false)
+    setPrompt("")
+  }, [])
 
   return (
     <div className="w-full h-screen relative">
