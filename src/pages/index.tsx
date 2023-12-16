@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Home() {
   const router = useRouter()
@@ -15,7 +15,7 @@ export default function Home() {
     }
   }
 
-  const handleGenerate = async () => {
+  const handleGenerate = () => {
     setGenerating(true)
     const website = Math.floor(Math.random() * 10) + 1
     setTimeout(
@@ -25,12 +25,12 @@ export default function Home() {
         ),
       5000
     )
-
-    setTimeout(() => {
-      setGenerating(false)
-      setPrompt("")
-    }, 8000)
   }
+
+  useEffect(() => {
+    setGenerating(false)
+    setPrompt("")
+  }, [])
 
   return (
     <div className="w-full h-screen relative">
