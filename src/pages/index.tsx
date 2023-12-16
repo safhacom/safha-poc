@@ -25,6 +25,11 @@ export default function Home() {
         ),
       5000
     )
+
+    setTimeout(() => {
+      setGenerating(false)
+      setPrompt("")
+    }, 8000)
   }
 
   return (
