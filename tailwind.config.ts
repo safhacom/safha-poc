@@ -9,15 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        royalblue: {
-          500: "#4169e1", // Replace with your preferred royal blue shade
-        },
-        peach: {
-          400: "#ffdab9", // Replace with your preferred peach shade
-        },
+        primary: "#50F5AC",
+        secondary: "#101223",
       },
       fontFamily: {
-        "ubuntu-mono": ["Ubuntu Mono", "monospace"],
+        "pf-aljamal": ["pf-aljamal", "monospace"],
       },
     },
   },

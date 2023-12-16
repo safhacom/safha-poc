@@ -3,5 +3,55 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  @apply bg-primary scroll-smooth font-pf-aljamal;
+}
+
+/* Define a keyframe animation for the rainbow border */
+@keyframes rainbowBorder {
+  0% {
+    background: linear-gradient(
+      45deg,
+      #f06,
+      #ff6,
+      #6f6,
+      #6ff,
+      #66f,
+      #f6f,
+      #f06
+    );
+  }
+  100% {
+    background: linear-gradient(
+      45deg,
+      #f06,
+      #ff6,
+      #6f6,
+      #6ff,
+      #66f,
+      #f6f,
+      #f06
+    );
+  }
+}
+
+/* Define the border-gradient class with the rainbow border animation */
+.border-gradient {
+  animation: rainbowBorder 5s linear infinite; /* Adjust animation duration as needed */
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  border-image: linear-gradient(
+    45deg,
+    #f06,
+    #ff6,
+    #6f6,
+    #6ff,
+    #66f,
+    #f6f,
+    #f06
+  );
+  border-image-slice: 1;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 8px; /* Adjust border radius as needed */
+  content: "";
 }
