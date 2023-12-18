@@ -1,69 +1,91 @@
-import { FC } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 
-interface Testimonial {
-  title: string;
-  description: string;
-}
-
-const testimonials: Testimonial[] = [
+const testimonials = [
   {
-    title: "Ambiance and Decor",
+    title: "Delicious Meals",
     description:
-      "From the moment our guests walk through the doors, they are enveloped in the warm, inviting atmosphere of our dining space. The decor is a harmonious blend of classic and contemporary styles, creating a unique environment that appeals to a wide range of tastes. Soft lighting and comfortable seating encourage diners to relax and enjoy their experience. Our patrons often compliment the thoughtful touches that reflect our commitment to creating a memorable ambiance, such as the hand-selected artwork adorning the walls and the gentle music that complements the mood of the evening.",
+      "The steak was cooked to perfection, and the seasoning was spot on. Best meal I've had in ages!",
+  },
+  {
+    title: "Cozy Atmosphere",
+    description:
+      "The ambiance is just perfect for a romantic dinner. Soft lighting and comfortable seating made our evening special.",
   },
   {
     title: "Exceptional Service",
     description:
-      "Our service team is the heart of our restaurant. Highly trained and always attentive, they are dedicated to providing an exceptional dining experience. Guests frequently praise the personalized attention they receive, noting that staff members are quick to offer recommendations, accommodate special requests, and ensure that each visit is special. Whether celebrating a milestone or enjoying a casual meal, our guests know that they can expect service that is both professional and genuinely friendly. The consistent five-star reviews we receive for our service are a testament to the passion and hard work of our team.",
+      "The staff were attentive and friendly, making us feel welcome. They went above and beyond to ensure we had a great experience.",
   },
   {
-    title: "Culinary Excellence",
+    title: "Great Value",
     description:
-      "At the core of our restaurant's acclaim is our culinary excellence. Our menu is a celebration of flavors, featuring innovative dishes that showcase the freshest local ingredients. Our executive chef is a maestro of the kitchen, skillfully blending traditional techniques with modern twists to delight the palate. Guests rave about signature dishes that have become synonymous with our name, as well as the seasonal specials that surprise and excite with every visit. The meticulous presentation of each plate is a visual feast, ensuring that the dining experience is as aesthetically pleasing as it is delicious.",
+      "Amazing quality food at reasonable prices. We got more than what we paid for!",
   },
   {
-    title: "Beverage Selection",
+    title: "Family Friendly",
     description:
-      "Our beverage program is designed to complement our culinary offerings perfectly. With an extensive selection of fine wines, craft beers, and artisanal cocktails, there is something to suit every taste and occasion. Our sommelier is always on hand to guide guests through our wine list, helping them to find the perfect pairing for their meal. Patrons often express their appreciation for the knowledge and expertise of our bartenders, who craft each cocktail with precision and flair. The thoughtfulness and variety of our beverage selection are frequently highlighted in reviews, making it clear that our drinks are more than an accompaniment�they are an integral part of the dining experience.",
-  },
-  {
-    title: "Sustainability and Community",
-    description:
-      "Our commitment to sustainability and community involvement is a point of pride for us and a highlight for many of our guests. We source ingredients from local farms and producers, reducing our carbon footprint and supporting the local economy. Our sustainable seafood program ensures that we are serving only the best, responsibly caught fish and shellfish. Our guests often comment on the freshness and quality of our ingredients, as well as their appreciation for our efforts to operate ethically and sustainably. Additionally, our involvement in community events and charitable initiatives shows our dedication to giving back, a value that resonates with our patrons.",
+      "My kids loved the children's menu, and the play area kept them entertained while we dined.",
   },
 ];
 
-const Testimonials: FC = () => {
+const Testimonials = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handlePrev = () => {
+    setActiveIndex(
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+    );
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
+
   return (
-    <section className="bg-[#FFF8F0] text-[#273D2F] p-8" id="testimonials">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-center mb-8"
-      >
-        <h2 className="text-[#C59A77] text-4xl font-ubuntu-mono mb-4">
-          Guest Experiences
-        </h2>
-      </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {testimonials.map((testimonial, index) => (
+    <section className="bg-cream py-12" id="testimonials">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-8"
+        >
+          <h2 className="text-4xl font-bold text-dark-charcoal mb-4">
+            What Our Guests Say
+          </h2>
+          <p className="text-muted-rose">
+            Real testimonials from our satisfied customers
+          </p>
+        </motion.div>
+
+        <div className="flex justify-center items-center">
+          <ChevronLeftIcon
+            className="testimonial-carousel-button h-8 w-8 cursor-pointer"
+            onClick={handlePrev}
+          />
           <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-[#F8F5F1] rounded-lg shadow-lg p-6"
+            key={activeIndex}
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -100, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="testimonial-card"
           >
-            <h3 className="text-[#9E4624] text-2xl font-ubuntu-mono mb-3">
-              {testimonial.title}
+            <h3 className="testimonial-title">
+              {testimonials[activeIndex].title}
             </h3>
-            <p className="text-[#273D2F]">{testimonial.description}</p>
+            <p className="testimonial-description">
+              {testimonials[activeIndex].description}
+            </p>
           </motion.div>
-        ))}
+          <ChevronRightIcon
+            className="testimonial-carousel-button h-8 w-8 cursor-pointer"
+            onClick={handleNext}
+          />
+        </div>
       </div>
     </section>
   );

@@ -1,13 +1,12 @@
 import AboutUs from "@/components/AboutUs";
-import LocationSection from "@/components/Location";
 import ContactForm from "@/components/Contactform";
-import GallerySection from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import NavigationHeader from "@/components/Navigationheader";
-import ReservationSection from "@/components/Reservation";
 import SpecialOffers from "@/components/SpecialOffers";
+import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footerwithlinks";
+import Reservations from "@/components/Reservations";
 export default function Home() {
   return (
     <>
@@ -15,10 +14,9 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <SpecialOffers />
-      <GallerySection />
+      <Gallery />
       <Testimonials />
-      <ReservationSection />
-      <LocationSection />
+      <Reservations />
       <ContactForm />
       <Footer />
     </>

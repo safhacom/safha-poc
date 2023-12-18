@@ -1,91 +1,79 @@
-import { FC } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import React from "react";
 
-const GallerySection: FC = () => {
-  const gallerySections = [
+const GalleryItem = ({ title, description, imgSrc }) => (
+  <motion.div
+    whileHover={{ scale: 1.03 }}
+    className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg"
+  >
+    <Image
+      src={imgSrc}
+      alt={title}
+      width={500}
+      height={300}
+      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-darkcharcoal bg-opacity-60 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+      <div className="text-center">
+        <p className="text-xl font-semibold text-cream">{title}</p>
+        <p className="text-md text-cream">{description}</p>
+      </div>
+    </div>
+  </motion.div>
+);
+
+const Gallery = () => {
+  const galleryItems = [
     {
-      title: "Our Signature Dishes",
+      title: "Interior Ambiance",
       description:
-        "Explore the culinary masterpieces that have defined our reputation. Each dish is photographed to perfection, offering a visual feast that promises to tantalize your taste buds.",
-      images: ["/food.png", "/food.png", "/food.png"],
+        "A glimpse into the cozy and inviting atmosphere of our dining space.",
+      imgSrc: "/food.png",
     },
     {
-      title: "Seasonal Menus",
+      title: "Signature Dishes",
       description:
-        "Discover our spring delights, summer refreshers, autumn harvest, and cozy winter warmers. We take pride in adapting our offerings to what nature provides.",
-      images: ["/food.png", "/food.png", "/food.png"],
+        "A showcase of our chef's culinary masterpieces that define our menu.",
+      imgSrc: "/food.png",
     },
     {
-      title: "Behind the Scenes",
+      title: "Fresh Ingredients",
       description:
-        "Step into our kitchen and witness the magic that happens behind the scenes. Experience the passion and precision that go into every meal we serve.",
-      images: ["/food.png", "/food.png", "/food.png"],
+        "Images of fresh, locally-sourced produce that we use in our kitchen.",
+      imgSrc: "/food.png",
     },
     {
-      title: "Ambiance and Decor",
+      title: "Private Events",
       description:
-        "Our restaurant is more than just a place to eat; it's an experience for all the senses. Browse through images of our tastefully decorated dining area.",
-      images: ["/food.png", "/food.png", "/food.png"],
+        "A look at the elegant setups for private parties and gatherings.",
+      imgSrc: "/food.png",
     },
     {
-      title: "Private Events and Celebrations",
+      title: "Seasonal Specials",
       description:
-        "We are honored to be a part of your special moments. See how our space transforms to make your event unforgettable.",
-      images: ["/food.png", "/food.png", "/food.png"],
+        "A preview of our seasonal menu items that keep our offerings exciting.",
+      imgSrc: "/food.png",
     },
     {
-      title: "Guest Experiences",
+      title: "Our Team",
       description:
-        "Our guests are the heart of our restaurant. See the smiles, the toasts, the savoring of every bite.",
-      images: ["/food.png", "/food.png", "/food.png"],
+        "Meet the passionate individuals behind our exceptional service.",
+      imgSrc: "/food.png",
     },
   ];
 
   return (
-    <div className="bg-[#FFF8F0] py-16 px-4">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-[#C59A77] text-4xl font-ubuntu-mono text-center mb-10">
-          Gallery
-        </h2>
-        {gallerySections.map((section, idx) => (
-          <div key={idx} className="mb-16">
-            <motion.h3
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
-              className="text-[#273D2F] text-2xl font-ubuntu-mono mb-6"
-            >
-              {section.title}
-            </motion.h3>
-            <p className="text-[#273D2F] mb-6">{section.description}</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {section.images.map((image, imageIdx) => (
-                <motion.div
-                  key={imageIdx}
-                  className="overflow-hidden rounded-lg"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Image
-                    src={image}
-                    alt={`${section.title} image ${imageIdx + 1}`}
-                    width={300}
-                    height={200}
-                    objectFit="cover"
-                    className="transition-transform duration-300 ease-in-out"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </motion.div>
-    </div>
+    <section className="py-12 bg-cream">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {galleryItems.map((item, index) => (
+            <GalleryItem key={index} {...item} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default GallerySection;
+export default Gallery;

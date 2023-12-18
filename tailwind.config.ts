@@ -9,18 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'dark-slate': '#2E4053',
-        'medium-slate': '#5D6D7E',
-        'silver-gray': '#D5D8DC',
-        'sky-blue': '#3498DB',
-        'brick-red': '#E74C3C',
-        'sea-green': '#16A085',
-        'sunflower-yellow': '#F1C40F',
-        'plum-purple': '#7D3C98',
+        cream: '#F8F5F1',
+        terracotta: '#DAA49A',
+        mutedrose: '#A37B73',
+        darkcharcoal: '#474044'
       },
       fontFamily: {
-        "ubuntu-mono": ["Ubuntu Mono", "monospace"],
+        lato: ['Lato', 'sans-serif']
       },
+      boxShadow: {
+        card: '0 4px 6px 0 rgba(0, 0, 0, 0.15)'
+      },
+      borderRadius: {
+        card: '0.5rem'
+      }
     },
   },
   plugins: [],

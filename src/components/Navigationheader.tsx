@@ -1,129 +1,90 @@
 import { useState } from "react";
-import Link from "next/link";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-const Navbar = () => {
+const NavigationHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     section?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
   };
 
   return (
-    <motion.nav
+    <motion.header
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed w-full z-10 bg-[#A37C40] backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 text-[#273D2F] font-UbuntuMono"
+      className="fixed w-full bg-cream bg-opacity-60 backdrop-filter backdrop-blur-lg border-b border-gray-200 text-darkcharcoal font-lato z-50"
     >
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-2xl font-bold"
-          onClick={() => scrollToSection("hero")}
-        >
-          Logo
-        </Link>
-        <div className="hidden md:flex space-x-4">
-          <Link
-            href="/"
-            className="hover:text-[#DAA49A]"
-            onClick={() => scrollToSection("hero")}
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="hover:text-[#DAA49A]"
-            onClick={() => scrollToSection("about")}
-          >
-            About
-          </Link>
-          <Link
-            href="/menu"
-            className="hover:text-[#DAA49A]"
-            onClick={() => scrollToSection("menu")}
-          >
-            Menu
-          </Link>
-          <Link
-            href="/reservations"
-            className="hover:text-[#DAA49A]"
-            onClick={() => scrollToSection("reservations")}
-          >
-            Reservations
-          </Link>
-          <Link
-            href="/contact"
-            className="hover:text-[#DAA49A]"
-            onClick={() => scrollToSection("contact")}
-          >
-            Contact
-          </Link>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+        <div className="flex items-center">
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Link href="/" className="text-xl font-bold">
+              Logo
+            </Link>
+          </motion.div>
         </div>
+        <nav className="hidden md:flex space-x-10">
+          {["Home", "About", "Menu", "Reservations", "Contact"].map(
+            (item, index) => (
+              <motion.a
+                key={index}
+                whileHover={{ color: "#DAA49A" }}
+                onClick={() => scrollToSection(item)}
+                className="cursor-pointer"
+              >
+                {item}
+              </motion.a>
+            )
+          )}
+        </nav>
         <div className="md:hidden">
-          <button onClick={handleToggle}>
-            {isOpen ? (
-              <XIcon className="h-6 w-6" />
-            ) : (
-              <MenuIcon className="h-6 w-6" />
-            )}
+          <button onClick={() => setIsOpen(!isOpen)}>
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+              />
+            </svg>
           </button>
         </div>
       </div>
-      <motion.div
-        initial={{ x: "-100%" }}
-        animate={{ x: isOpen ? 0 : "-100%" }}
-        transition={{ type: "spring", stiffness: 75 }}
-        className={`absolute top-0 left-0 w-full h-screen bg-[#FFF8F0] p-4 flex flex-col space-y-4 justify-center items-center ${
-          isOpen ? "block" : "hidden"
-        }`}
-      >
-        <Link
-          href="/"
-          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
-          onClick={() => scrollToSection("hero")}
+      {isOpen && (
+        <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 120 }}
+          className="md:hidden absolute top-0 left-0 w-full bg-cream p-8"
         >
-          Home
-        </Link>
-        <Link
-          href="/about"
-          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
-          onClick={() => scrollToSection("about")}
-        >
-          About
-        </Link>
-        <Link
-          href="/menu"
-          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
-          onClick={() => scrollToSection("menu")}
-        >
-          Menu
-        </Link>
-        <Link
-          href="/reservations"
-          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
-          onClick={() => scrollToSection("reservations")}
-        >
-          Reservations
-        </Link>
-        <Link
-          href="/contact"
-          className="text-xl font-bold text-[#273D2F] hover:text-[#DAA49A]"
-          onClick={() => scrollToSection("contact")}
-        >
-          Contact
-        </Link>
-      </motion.div>
-    </motion.nav>
+          <div className="flex flex-col items-center space-y-6">
+            {["Home", "About", "Menu", "Reservations", "Contact"].map(
+              (item, index) => (
+                <motion.a
+                  key={index}
+                  whileHover={{ color: "#DAA49A" }}
+                  onClick={() => {
+                    setIsOpen(false);
+                    scrollToSection(item);
+                  }}
+                  className="cursor-pointer text-xl"
+                >
+                  {item}
+                </motion.a>
+              )
+            )}
+          </div>
+        </motion.div>
+      )}
+    </motion.header>
   );
 };
 
-export default Navbar;
+export default NavigationHeader;
