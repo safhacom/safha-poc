@@ -1,15 +1,13 @@
-import AboutUs from "@/components/AboutUs";
+import AboutUs from "@/components/AboutUs"
 // import LocationSection from "@/components/Location";
-import ContactForm from "@/components/Contactform";
-import Home2 from "@/components/Home";
-import Hero from "@/components/Hero";
-import Testimonials from "@/components/Testimonials";
-import LocationSection from "@/components/Location";
-import MenuHighlights from "@/components/MenuHighlights";
-import NavigationHeader from "@/components/Navigationheader";
-import Gallery from "@/components/Gallery";
-import SpecialOffers from "@/components/SpecialOffers";
-import Footer from "@/components/Footerwithlinks";
+import ContactForm from "@/components/Contactform"
+import Footer from "@/components/Footerwithlinks"
+import Gallery from "@/components/Gallery"
+import Hero from "@/components/Hero"
+import Home2 from "@/components/Home"
+import NavigationHeader from "@/components/Navigationheader"
+import Testimonials from "@/components/Testimonials"
+
 export default function Home() {
   return (
     <>
@@ -17,7 +15,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <Home2 />
-      <SpecialOffers />
+
       <Gallery />
       <Testimonials />
       <ContactForm />
@@ -26,5 +24,5 @@ export default function Home() {
       <Testimonials />
       <ContactusSection /> */}
     </>
-  );
+  )
 }

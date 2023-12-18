@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
+import { useState } from "react"
 
 const ContactForm = () => {
-  const [activeTab, setActiveTab] = useState("reservation");
+  const [activeTab, setActiveTab] = useState("reservation")
 
   const tabContent = {
     reservation: {
@@ -33,7 +34,7 @@ const ContactForm = () => {
       description:
         "For suppliers looking to work with us, please provide your details.",
     },
-  };
+  }
 
   const renderForm = () => {
     switch (activeTab) {
@@ -43,9 +44,9 @@ const ContactForm = () => {
       // Form for private events
       // ... other cases
       default:
-        return null;
+        return null
     }
-  };
+  }
 
   return (
     <section className="bg-cream text-charcoal font-lato p-8" id="contact">
@@ -91,7 +92,7 @@ const ContactForm = () => {
         </div>
       </motion.div>
     </section>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm
