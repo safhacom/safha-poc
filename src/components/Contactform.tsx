@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 const ContactForm = () => {
@@ -54,6 +53,7 @@ const ContactForm = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
+        className="max-w-2xl mx-auto text-center mb-10"
       >
         <h2 className="text-burgundy text-4xl font-bold mb-4">Get in Touch</h2>
         <p className="mb-8">

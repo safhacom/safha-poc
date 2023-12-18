@@ -4,6 +4,8 @@ import ContactForm from "@/components/Contactform";
 import Home2 from "@/components/Home";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
+import LocationSection from "@/components/Location";
+import MenuHighlights from "@/components/MenuHighlights";
 import NavigationHeader from "@/components/Navigationheader";
 import Gallery from "@/components/Gallery";
 import SpecialOffers from "@/components/SpecialOffers";
@@ -20,6 +22,9 @@ export default function Home() {
       <Testimonials />
       <ContactForm />
       <Footer />
+      {/* <Services />
+      <Testimonials />
+      <ContactusSection /> */}
     </>
   );
 }

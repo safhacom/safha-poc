@@ -2,12 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FC } from "react";
 
-interface Testimonial {
-  title: string;
-  description: string;
-}
-
-const testimonials: Testimonial[] = [
+const testimonials = [
   {
     title: "Ambiance and Decor",
     description:
@@ -58,6 +53,7 @@ const testimonials: Testimonial[] = [
     description:
       "After years of dining here, the quality and service have remained consistently excellent.",
   },
+  // ... other testimonials
 ];
 
 const Testimonials: FC = () => (
