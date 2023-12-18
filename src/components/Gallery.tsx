@@ -1,91 +1,80 @@
-import { FC } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const GallerySection: FC = () => {
-  const gallerySections = [
-    {
-      title: "Our Signature Dishes",
-      description:
-        "Explore the culinary masterpieces that have defined our reputation. Each dish is photographed to perfection, offering a visual feast that promises to tantalize your taste buds.",
-      images: ["/food.png", "/food.png", "/food.png"],
-    },
-    {
-      title: "Seasonal Menus",
-      description:
-        "Discover our spring delights, summer refreshers, autumn harvest, and cozy winter warmers. We take pride in adapting our offerings to what nature provides.",
-      images: ["/food.png", "/food.png", "/food.png"],
-    },
-    {
-      title: "Behind the Scenes",
-      description:
-        "Step into our kitchen and witness the magic that happens behind the scenes. Experience the passion and precision that go into every meal we serve.",
-      images: ["/food.png", "/food.png", "/food.png"],
-    },
-    {
-      title: "Ambiance and Decor",
-      description:
-        "Our restaurant is more than just a place to eat; it's an experience for all the senses. Browse through images of our tastefully decorated dining area.",
-      images: ["/food.png", "/food.png", "/food.png"],
-    },
-    {
-      title: "Private Events and Celebrations",
-      description:
-        "We are honored to be a part of your special moments. See how our space transforms to make your event unforgettable.",
-      images: ["/food.png", "/food.png", "/food.png"],
-    },
-    {
-      title: "Guest Experiences",
-      description:
-        "Our guests are the heart of our restaurant. See the smiles, the toasts, the savoring of every bite.",
-      images: ["/food.png", "/food.png", "/food.png"],
-    },
-  ];
+const galleryItems = [
+  {
+    title: "Dining Ambiance",
+    description:
+      "Explore the elegant dining space that sets the mood for a memorable culinary experience.",
+    imageUrl: "/food.png",
+  },
+  {
+    title: "Signature Dishes",
+    description:
+      "A visual feast of our chef's masterpieces, crafted with the finest ingredients.",
+    imageUrl: "/food.png",
+  },
+  {
+    title: "Private Events",
+    description:
+      "View our exclusive areas perfect for private parties, business meetings, and special celebrations.",
+    imageUrl: "/food.png",
+  },
+  {
+    title: "Seasonal Specials",
+    description:
+      "Get a glimpse of the seasonal delicacies and limited-time offerings that keep our menu fresh and exciting.",
+    imageUrl: "/food.png",
+  },
+  {
+    title: "Behind the Scenes",
+    description:
+      "Take a sneak peek into our kitchen where the magic happens, showcasing our chefs' passion and expertise.",
+    imageUrl: "/food.png",
+  },
+  {
+    title: "Customer Moments",
+    description:
+      "Cherished moments of our guests enjoying their time at our restaurant.",
+    imageUrl: "/food.png",
+  },
+];
 
+const Gallery = () => {
   return (
-    <div className="bg-[#FFF8F0] py-16 px-4">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-[#C59A77] text-4xl font-ubuntu-mono text-center mb-10">
-          Gallery
-        </h2>
-        {gallerySections.map((section, idx) => (
-          <div key={idx} className="mb-16">
-            <motion.h3
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
-              className="text-[#273D2F] text-2xl font-ubuntu-mono mb-6"
+    <div className="bg-cream p-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {galleryItems.map((item, index) => (
+            <motion.div
+              key={index}
+              className="group rounded-card overflow-hidden shadow-card border-2 border-terracotta relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
             >
-              {section.title}
-            </motion.h3>
-            <p className="text-[#273D2F] mb-6">{section.description}</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {section.images.map((image, imageIdx) => (
-                <motion.div
-                  key={imageIdx}
-                  className="overflow-hidden rounded-lg"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Image
-                    src={image}
-                    alt={`${section.title} image ${imageIdx + 1}`}
-                    width={300}
-                    height={200}
-                    objectFit="cover"
-                    className="transition-transform duration-300 ease-in-out"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </motion.div>
+              <Image
+                src={item.imageUrl}
+                alt={item.title}
+                layout="fill"
+                objectFit="cover"
+                className="transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-charcoal to-transparent">
+                <h3 className="text-burgundy font-lato text-lg">
+                  {item.title}
+                </h3>
+                <p className="text-charcoal font-lato text-sm">
+                  {item.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default GallerySection;
+export default Gallery;

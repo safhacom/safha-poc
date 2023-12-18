@@ -4,41 +4,32 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center text-center bg-[#FFF8F0]">
+    <div className="relative h-screen flex items-center justify-center bg-cream">
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         className="absolute inset-0 z-0"
       >
         <Image
-          src="/bg_res.png" // replace with your image path
+          src="/bg_res.png"
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="filter brightness-50"
-          alt="hi"
+          alt="Restaurant Background"
+          className="opacity-75"
         />
-        <div className="absolute inset-0 bg-[#273D2F] opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-cream opacity-60" />
       </motion.div>
-      <motion.div
-        initial={{ y: 30, opacity: 0 }}
+      <motion.h1
+        initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="z-10 p-4 backdrop-filter backdrop-blur-sm border border-gray-200 rounded-lg"
+        className="z-10 text-4xl md:text-6xl font-serif text-burgundy shadow-lg"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-[#C59A77] mb-6">
-          To provide an unforgettable dining experience that delights the
-          senses, fosters connections, and celebrates the diversity of flavors
-          from around the world.
-        </h1>
-        <a
-          href="#menu"
-          className="inline-block px-6 py-3 text-lg font-medium bg-[#DAA49A] text-white rounded-md shadow-md hover:bg-[#C59A77] focus:outline-none focus:ring-2 focus:ring-[#DAA49A] focus:ring-opacity-50 transition duration-300"
-        >
-          Discover Our Menu
-        </a>
-      </motion.div>
+        To provide a memorable dining experience with passionately prepared
+        cuisine, a welcoming atmosphere, and impeccable service.
+      </motion.h1>
     </div>
   );
 };

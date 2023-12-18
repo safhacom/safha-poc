@@ -1,11 +1,11 @@
 import AboutUs from "@/components/AboutUs";
-import LocationSection from "@/components/Location";
+// import LocationSection from "@/components/Location";
 import ContactForm from "@/components/Contactform";
-import GallerySection from "@/components/Gallery";
+import Home2 from "@/components/Home";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import NavigationHeader from "@/components/Navigationheader";
-import ReservationSection from "@/components/Reservation";
+import Gallery from "@/components/Gallery";
 import SpecialOffers from "@/components/SpecialOffers";
 import Footer from "@/components/Footerwithlinks";
 export default function Home() {
@@ -14,11 +14,10 @@ export default function Home() {
       <NavigationHeader />
       <Hero />
       <AboutUs />
+      <Home2 />
       <SpecialOffers />
-      <GallerySection />
+      <Gallery />
       <Testimonials />
-      <ReservationSection />
-      <LocationSection />
       <ContactForm />
       <Footer />
     </>
