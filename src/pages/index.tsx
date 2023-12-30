@@ -19,7 +19,7 @@ export default function Home() {
     setGenerating(true)
     const website = Math.floor(Math.random() * 10) + 1
     setTimeout(() => {
-      router.push(`https://safha-web-git-safha-web-${website}-yat.vercel.app`)
+      router.push(`https://safha-prompt-poc-git-safha-web-${website}-safha.vercel.app`)
     }, 5000)
   }
 
