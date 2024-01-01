@@ -1,79 +1,66 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
 
-const GalleryItem = ({ title, description, imgSrc }) => (
-  <motion.div
-    whileHover={{ scale: 1.03 }}
-    className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg"
-  >
-    <Image
-      src={imgSrc}
-      alt={title}
-      width={500}
-      height={300}
-      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-    />
-    <div className="absolute inset-0 bg-darkcharcoal bg-opacity-60 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-      <div className="text-center">
-        <p className="text-xl font-semibold text-cream">{title}</p>
-        <p className="text-md text-cream">{description}</p>
-      </div>
+const galleryItems = [
+  {
+    title: "Dining Ambiance",
+    description: "A glimpse into our cozy and inviting dining space.",
+    imagePath: "/DiningAmbiance_Gallery.png",
+  },
+  {
+    title: "Signature Dishes",
+    description: "A showcase of our chef's culinary masterpieces.",
+    imagePath: "/SignatureDishes_Gallery.png",
+  },
+  {
+    title: "Fresh Ingredients",
+    description: "A peek at the fresh, locally-sourced ingredients we use.",
+    imagePath: "/FreshIngredients_Gallery.png",
+  },
+  {
+    title: "Beverage Selection",
+    description: "A look at our selection of fine wines and crafted cocktails.",
+    imagePath: "/BeverageSelection_Gallery.png",
+  },
+  {
+    title: "Private Events",
+    description: "Images of private parties and events hosted in our venue.",
+    imagePath: "/PrivateEvents_Gallery.png",
+  },
+  {
+    title: "Seasonal Specials",
+    description:
+      "A preview of our seasonal menu updates and limited-time offers.",
+    imagePath: "/SeasonalSpecials_Gallery.png",
+  },
+];
+
+const Gallery = () => (
+  <div className="container mx-auto p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {galleryItems.map((item, index) => (
+        <motion.div
+          key={index}
+          className="gallery-card"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          <Image
+            src={item.imagePath}
+            alt={item.title}
+            className="gallery-image"
+            width={400}
+            height={200}
+          />
+          <div className="gallery-description">
+            <h3 className="gallery-title">{item.title}</h3>
+            <p className="gallery-text">{item.description}</p>
+          </div>
+        </motion.div>
+      ))}
     </div>
-  </motion.div>
+  </div>
 );
-
-const Gallery = () => {
-  const galleryItems = [
-    {
-      title: "Interior Ambiance",
-      description:
-        "A glimpse into the cozy and inviting atmosphere of our dining space.",
-      imgSrc: "/food.png",
-    },
-    {
-      title: "Signature Dishes",
-      description:
-        "A showcase of our chef's culinary masterpieces that define our menu.",
-      imgSrc: "/food.png",
-    },
-    {
-      title: "Fresh Ingredients",
-      description:
-        "Images of fresh, locally-sourced produce that we use in our kitchen.",
-      imgSrc: "/food.png",
-    },
-    {
-      title: "Private Events",
-      description:
-        "A look at the elegant setups for private parties and gatherings.",
-      imgSrc: "/food.png",
-    },
-    {
-      title: "Seasonal Specials",
-      description:
-        "A preview of our seasonal menu items that keep our offerings exciting.",
-      imgSrc: "/food.png",
-    },
-    {
-      title: "Our Team",
-      description:
-        "Meet the passionate individuals behind our exceptional service.",
-      imgSrc: "/food.png",
-    },
-  ];
-
-  return (
-    <section className="py-12 bg-cream">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {galleryItems.map((item, index) => (
-            <GalleryItem key={index} {...item} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 export default Gallery;

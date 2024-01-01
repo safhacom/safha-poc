@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .reservation-card {
+    @apply bg-white p-6 rounded-lg shadow-md my-4;
+  }
+
+  .reservation-title {
+    @apply text-2xl text-darkBlue font-bold mb-2;
+  }
+
+  .reservation-description {
+    @apply text-base text-mutedPurple;
+  }
+
+  .cta-button {
+    @apply bg-salmonPink text-white py-2 px-4 rounded hover:bg-salmonPink/90 transition-colors;
+  }
+}

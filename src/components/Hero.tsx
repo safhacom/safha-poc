@@ -1,43 +1,42 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-import React from "react";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
-    <div className="relative h-screen flex items-center justify-center bg-cream">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="absolute inset-0 z-0"
-      >
-        <Image
-          src="/bg_res.png" // Replace with actual image path
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="opacity-75"
-          alt="Restaurant Background"
-        />
-        <div className="absolute inset-0 bg-gray-50 bg-opacity-10 backdrop-filter backdrop-blur-sm border border-gray-200" />
-      </motion.div>
-      <motion.h1
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="z-10 text-4xl md:text-6xl font-semibold text-charcoal px-4 text-center border-2 border-terracotta py-2"
-      >
-        To provide a unique and memorable dining experience through exceptional
-        service, exquisite cuisine, and a welcoming atmosphere that feels like
-        home.
-      </motion.h1>
-    </div>
+    <section className='relative bg-white overflow-hidden'>
+      <div className='container mx-auto px-4 lg:px-8'>
+        <div className='flex flex-wrap items-center lg:justify-between justify-center'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0'
+          >
+            <h1 className='text-2xl lg:text-5xl font-bold leading-tight text-2E4052'>
+              To provide a unique dining experience with a menu that delights the palate, a setting that captivates the senses, and service that warms the heart.
+            </h1>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className='w-full lg:w-1/2'
+          >
+            <div className='relative h-64 lg:h-96 w-full border border-F2F4F3 rounded-lg overflow-hidden'>
+              <Image
+                src='/Restaurant_Hero_bg.png'
+                alt='Restaurant Hero Background'
+                layout='fill'
+                objectFit='cover'
+                className='transition-opacity duration-300 ease-in-out'
+              />
+              <div className='absolute inset-0 bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm'></div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
   );
 };
 
 export default Hero;
-
-// TailwindCSS classes
-// .bg-cream { --tw-bg-opacity: 1; background-color: rgba(248, 245, 241, var(--tw-bg-opacity)); }
-// .text-charcoal { --tw-text-opacity: 1; color: rgba(71, 64, 68, var(--tw-text-opacity)); }
-// .border-terracotta { --tw-border-opacity: 1; border-color: rgba(218, 164, 154, var(--tw-border-opacity)); }

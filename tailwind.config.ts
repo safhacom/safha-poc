@@ -9,22 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: '#F8F5F1',
-        terracotta: '#DAA49A',
-        mutedrose: '#A37B73',
-        darkcharcoal: '#474044'
+        lightGray: '#F2F4F3',
+        salmonPink: '#DAA49A',
+        mutedPurple: '#A6808C',
+        darkBlue: '#2E4052',
+        deepMaroon: '#5C2751',
+        warmYellow: '#F2C14E',
+        white: '#FFFFFF'
       },
       fontFamily: {
-        lato: ['Lato', 'sans-serif']
+        sans: ['Open Sans', 'sans-serif']
       },
       boxShadow: {
-        card: '0 4px 6px 0 rgba(0, 0, 0, 0.15)'
+        'soft': '0 4px 6px rgba(0, 0, 0, 0.1)'
       },
-      borderRadius: {
-        card: '0.5rem'
+      backdropBlur: {
+        'light': '2px'
+      },
+      borderWidth: {
+        'light': '1px'
       }
-    },
+    }
   },
   plugins: [],
+  variants: {
+    extend: {
+      borderWidth: ['responsive'],
+      boxShadow: ['responsive'],
+      backdropBlur: ['responsive']
+    }
+  }
 }
 export default config

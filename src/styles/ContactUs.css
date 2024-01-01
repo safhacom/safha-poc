@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .contact-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden relative;
+  }
+
+  .contact-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent to-white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .contact-title {
+    @apply text-2xl font-bold text-darkBlue;
+  }
+
+  .contact-description {
+    @apply text-base text-mutedPurple;
+  }
+
+  .contact-button {
+    @apply bg-salmonPink text-white font-semibold py-2 px-4 rounded hover:bg-salmonPink;
+  }
+
+  .contact-icon {
+    @apply h-6 w-6 text-darkBlue;
+  }
+}

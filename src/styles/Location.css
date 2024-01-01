@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden border border-gray-200;
+  }
+
+  .card-header {
+    @apply bg-lightGray text-darkBlue font-semibold p-4;
+  }
+
+  .card-content {
+    @apply p-4;
+  }
+
+  .card-highlight {
+    @apply text-salmon-pink;
+  }
+
+  .glass-effect {
+    @apply backdrop-filter backdrop-blur-lg bg-opacity-30;
+  }
+}

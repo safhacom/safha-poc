@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .footer-link {
+    @apply text-sm text-2E4052 hover:text-DAA49A;
+  }
+
+  .footer-title {
+    @apply text-lg font-bold text-deepMaroon;
+  }
+
+  .footer-description {
+    @apply text-xs text-mutedPurple;
+  }
+
+  .footer-card {
+    @apply bg-lightGray rounded-lg shadow-md p-4 m-2;
+  }
+
+  .footer-container {
+    @apply flex flex-wrap justify-between items-start p-8 bg-white;
+  }
+
+  .footer-column {
+    @apply w-full md:w-1/2 lg:w-1/4;
+  }
+}
