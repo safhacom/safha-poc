@@ -1,12 +1,14 @@
 {
-  "name": "safha-web",
+  "name": "safha-poc",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker:build": "docker build -t safha-poc .",
+    "docker:run": "docker run -p 3000:3000 safha-poc"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
