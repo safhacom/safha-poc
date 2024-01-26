@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="w-full h-screen relative">
       <img
-        src="/logo.pndg"
+        src="/logo.pnd"
         className="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center z-50"
         width={200}
         height={200}
